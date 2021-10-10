@@ -1,4 +1,3 @@
-import functools
 serial = 1955
 
 # GRID OF PARTIAL SUMS TO THAT POINT FROM POINT (0, 0)
