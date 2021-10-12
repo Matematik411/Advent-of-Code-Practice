@@ -2,30 +2,33 @@ navodila = input()
 
 zeObiskano = {(0, 0)}
 trenutno = [0, 0]
+drugoTrenutno = [0, 0]
+oseba = 0
+
+smeri = ["^", ">", "<", "v"]
+spremembe = [(0, 1), (1, 0), (-1, 0), (0, -1)]
+spremembeX = [0, 1, -1, 0]
+spremembeY = [1, 0, 0, -1]
 
 for znak in navodila:
-    if znak == "^":
-        trenutno[1] += 1
-        vnos = tuple(trenutno)
-        if vnos not in zeObiskano:
-            zeObiskano.add(vnos)
+    kateri = smeri.index(znak)
 
-    elif znak == ">":
-        trenutno[0] += 1
+    if oseba == 0:
+        kateri = smeri.index(znak)
+        trenutno = [trenutno[0] + spremembeX[kateri], trenutno[1] + spremembeY[kateri]]
         vnos = tuple(trenutno)
-        if vnos not in zeObiskano:
-            zeObiskano.add(vnos)
-
-    elif znak == "<":
-        trenutno[0] -= 1
-        vnos = tuple(trenutno)
-        if vnos not in zeObiskano:
-            zeObiskano.add(vnos)
-
     else:
-        trenutno[1] -= 1
-        vnos = tuple(trenutno)
-        if vnos not in zeObiskano:
-            zeObiskano.add(vnos)
+        kateri = smeri.index(znak)
+        drugoTrenutno[0] += spremembeX[kateri]
+        drugoTrenutno[1] += spremembeY[kateri]
+        vnos = tuple(drugoTrenutno)
 
-print("a: " + str(len(zeObiskano)))
+    if vnos not in zeObiskano:
+        zeObiskano.add(vnos)
+
+    oseba = 1 - oseba
+    
+
+aSol = 2081
+print("a: " + str(aSol))
+print("b: " + str(len(zeObiskano)))
