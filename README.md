@@ -2,6 +2,7 @@
 Previous years of AoC
 
 - 2015 with Andrej
+- 2016 alone (start 15.11.2021)
 - 2018 alone
 
 *Nejc Zajc*
