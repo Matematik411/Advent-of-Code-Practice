@@ -5,10 +5,10 @@ table = [False for _ in range(6)]
 while not all(table):
     table = [False for _ in range(6)]
 
-    if s + 1 + 15 % 17 == 0:
+    if s + 1 + 15 % 17 == 0: # s === 1 (17)
         table[0] = True
     
-    if s + 2 + 2 % 3 == 0:
+    if s + 2 + 2 % 3 == 0:# s === 2 (3)
         table[1] = True
     
     if s + 3 + 4 % 19 == 0:
