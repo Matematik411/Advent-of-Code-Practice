@@ -1,4 +1,5 @@
 import hashlib
+#this is for 2nd part of day 17
 start_code = "pvhmgsws"
 
 def doors(s):
