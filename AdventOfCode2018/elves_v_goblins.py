@@ -41,7 +41,7 @@ class World:
         self.units = self.collect_units(attack)
 
         #a)
-        #self.battle_simulation()
+        self.battle_simulation()
         #b)
         
 
@@ -113,9 +113,7 @@ class World:
                     combat_sum += u.hp
                 print("combat sum is ", combat_sum)
                 print("result is ", ending * combat_sum)
-                return self.end
-                
-            
+                return self.end         
     
     def collect_units(self, attack):
         units = {}
@@ -268,18 +266,18 @@ world = []
 for _ in range(32):
     world.append([x for x in input()])
 #a)
-#world = World(world)
+world = World(world)
 
 #b)
-a = 4
-while True:
-    copy = []
-    for l in world:
-        copy.append([x for x in l])
-    w = World(copy, a)
-    res = w.battle_no_elf_deaths(a)
-    if res > 1:
-        a += 1
-    else:
-        break
+# a = 4
+# while True:
+#     copy = []
+#     for l in world:
+#         copy.append([x for x in l])
+#     w = World(copy, a)
+#     res = w.battle_no_elf_deaths(a)
+#     if res > 1:
+#         a += 1
+#     else:
+#         break
 
