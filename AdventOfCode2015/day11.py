@@ -29,8 +29,6 @@ def preveri(niz):
         
     return trojke and (dvojni_par >= 2)
 
-lepe = 0
-#lepe2 = 0
 geslo = "hxbxwxba"
 
 def naslednje(s):
