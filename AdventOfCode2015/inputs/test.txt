@@ -1,1 +1,12 @@
-^v^v^v^v^v
+data = ()()()(){}{[[[][]}{}{}{}]]})
+
+
+oklep = []
+
+
+
+for x in data:
+    if x in "([{"
+        oklep.append(x)
+    elif x in ")]}":
+        delamo
