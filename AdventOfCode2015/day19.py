@@ -1,5 +1,4 @@
 from queue import Queue
-import re
 zdravilo = input()
 menjave = {}
 obrati = {}
@@ -43,6 +42,7 @@ def variacije(molekula, pravila, koliko):
                     vse_mozne.add(nova)
     
     vse_mozne = list(vse_mozne)
+    vse_mozne.sort(reverse=True)
     vse_mozne.sort(key=lambda s: len(s))
     
     if koliko > 0:
@@ -75,7 +75,7 @@ while not aktivne.empty():
 
     # ze_narejene.add(trenutna)
     moznosti = variacije(trenutna, obrati, 1)
-    print(trenutna, moznosti, koraki)
+    #print(trenutna, moznosti, koraki)
 
 
     for primer in moznosti:
