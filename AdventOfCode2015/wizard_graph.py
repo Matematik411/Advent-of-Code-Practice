@@ -115,7 +115,7 @@ while not pq.empty():
         print(c)
         break
 
-    new = round(x[0], x[1], c, False) #trigger last for part two
+    new = round(x[0], x[1], c, True) #trigger last for part two
     for a, b in new:
         pq.put((a, counter, b))
         counter += 1

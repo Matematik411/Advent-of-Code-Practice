@@ -1,10 +1,10 @@
 # This is day22 - works for part 1, minor change needed for day 2
 spells = {
-"missile": 53, # It instantly does 4 damage. 
-"drain": 73, # It instantly does 2 damage and heals you for 2 hit points.
-"shield": 113, # Effect: 6 turns. While it is active, your armor is increased by 7.
-"poison": 173, # Effect: 6 turns. At the start of each turn while it is active, it deals the boss 3 damage.
-"recharge": 229, # Effect: 5 turns. At the start of each turn while it is active, it gives you 101 new mana.
+    "missile": 53, # It instantly does 4 damage. 
+    "drain": 73, # It instantly does 2 damage and heals you for 2 hit points.
+    "shield": 113, # Effect: 6 turns. While it is active, your armor is increased by 7.
+    "poison": 173, # Effect: 6 turns. At the start of each turn while it is active, it deals the boss 3 damage.
+    "recharge": 229, # Effect: 5 turns. At the start of each turn while it is active, it gives you 101 new mana.
 }
 class Unit:
     def __init__(self, hp, attack, armor, mana, effects):
