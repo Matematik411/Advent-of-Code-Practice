@@ -166,20 +166,20 @@ V tem razdelku smo videli konstruktivne dokaze za obstoj enakostraničnih trikot
 
 %--------------------------------------------------------------
 \section{Presečno število}\label{razd:presecno}
-Glavni nov pojem, ki ga potrebujemo za nadaljne delo je pojem presečnega števila. Za dani krivulji v ravnini, bi radi načrtno prešteli njune točke preseka. S takšnih znanjem bomo kasneje lahko natančno povedali, kje bodo obstajali enakostranični trikotniki.
+Glavni nov pojem, ki ga potrebujemo za nadaljne delo je pojem presečnega števila krivulj. Za dani preslikavi v ravnino, bi radi načrtno prešteli točke preseka njunih slik. S takšnih znanjem bomo kasneje lahko natančno povedali, kje bodo obstajali enakostranični trikotniki.
 
-Naj bo $I = [0, 1] \subset \R$ in naj bosta $f,\ g \colon I \to X \subset \R^2,$ taki ravninski krivulji, da zadoščata pogoju
+Naj bo $I = [0, 1] \subset \R$ in naj bosta $f,\ g \colon I \to X \subset \R^2,$ taki preslikavi, da zadoščata pogoju
 \begin{equation}\label{eq:razl_rob}
 \{f(0), f(1)\} \cap g(I) = \emptyset \quad \text{in} \quad \{g(0), g(1)\} \cap f(I) = \emptyset.
 \end{equation}
-Pojem presečnega števila lahko dobro definiramo le za pare krivulj, ki ustrezajo \eqref{eq:razl_rob}, zato se omejimo na takšne.
+Pojem presečnega števila lahko dobro definiramo le za pare preslikav, ki ustrezajo \eqref{eq:razl_rob}, zato se omejimo na takšne.
 
-Naj bosta za začetek $f$ in $g$ kosoma linearni ravninski krivulji, ki ustrezata \eqref{eq:razl_rob}. Ker se poljubni daljici sekata v kvečjemu eni komponenti, velja da je $f(I) \cap g(I)$ zaprta množica, ki vsebuje kvečjemu končno mnogo komponent za povezanost. Te komponente so lahko točke ali kosoma linearne krivulje. Presečno število krivulj bomo definirali kot vsoto presečnih števil komponent njunega preseka, zato si najprej oglejmo, kako definiramo presečno število posamezne komponente.
+Naj bosta za začetek $f$ in $g$ kosoma linearni preslikavi, ki ustrezata \eqref{eq:razl_rob}. Njuni sliki opremimo s standardno usmerjenostjo od slike vrednosti $0$ do slike vrednosti $1$. Ker se poljubni daljici sekata v kvečjemu eni komponenti, velja da je $f(I) \cap g(I)$ zaprta množica, ki vsebuje kvečjemu končno mnogo komponent za povezanost. Te komponente so lahko točke ali kosoma linearne krivulje. Presečno število preslikav bomo definirali kot vsoto presečnih števil komponent preseka njunih slik.V ta namen si najprej oglejmo, kako definiramo presečno število posamezne komponente.
 
-Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo definirali presečno število komponente in ga označili z $\ind[K]{f}{g}$. Najprej denimo, da je $K$ le točka, torej $K = \{x\}.$ Za primer ko je $x$ točka nelinearnosti $f$ ali $g$ in se krivulji v $x$ ne prečkata, primer tega je prikazan na sliki \ref{fig:presecno_tocka_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer označimo smerna vektorja krivulj $f$ in $g$ v točki $x$ kot $s_f$ in $s_g$, kar prikazuje slika \ref{fig:presecno_tocka_2}. Kot presečno število komponente definiramo
+Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo definirali presečno število komponente in ga označili z $\ind[K]{f}{g}$. Najprej denimo, da je $K$ le točka, torej $K = \{x\}.$ Za primer ko je $x$ točka nelinearnosti $f$ ali $g$ in se sliki preslikav v $x$ ne prečkata, primer tega je prikazan na sliki \ref{fig:presecno_tocka_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer označimo smerna vektorja slik preslikav $f$ in $g$ v točki $x$ kot $\overrightarrow{s_f}$ in $\overrightarrow{s_g}$, kar prikazuje slika \ref{fig:presecno_tocka_2}. Kot presečno število komponente definiramo
 \begin{equation*}
 \ind[K]{f}{g} = \begin{cases}
-1; &s_f,\ s_g\ \text{tvorita pozitivno orientirano bazo,}\\
+1; & \overrightarrow{s_f},\ \overrightarrow{s_g}\ \text{tvorita pozitivno orientirano bazo,}\\
 -1; &\text{sicer}.
 \end{cases}
 \end{equation*}
@@ -205,15 +205,15 @@ Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo defin
 	\draw[gray] (-2, 1.5) -- (0, 0);
 	\draw[->, gray] (0,0) -- (0, -1.5) node[anchor=north west] {$g$};
 	\node[right] at (0, 0) {$x_0$};
-	\node[right] at (0.25, 1) {$s_f$};
-	\node[right] at (0, -1) {$s_g$};
+	\node[right] at (0.25, 1) {$\overrightarrow{s_f}$};
+	\node[right] at (0, -1) {$\overrightarrow{s_g}$};
 	\end{tikzpicture}
 	\caption{$\ind[\{x_0\}]{f}{g} = -1$}
 	\label{fig:presecno_tocka_2}
 \end{minipage}
 \end{figure}
 
-Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = f([a, b])$, za $a,\ b \in (0, 1),\ a < b.$ Prav tako obstaja tak $\varepsilon > 0$, da sta preseka zaprtih krogel z unijo krivulj $\overline{K(f(a), \varepsilon)} \cap (f(I) \cup g(I))$ in $\overline{K(f(b), \varepsilon)} \cap (f(I) \cup g(I))$ linearni triodi s stičišči krakov v $f(a)$ oz. $f(b).$ Linearna trioda je trioda, ki ima za krake daljice. Za določitev presečnega števila najprej preverimo, ali je prišlo do prečkanja krivulj. Zato zavrtimo daljico $\overline{f(a)f(a+\varepsilon)}$ v pozitivni smeri okrog $f(a)$ in daljico $\overline{f(b)f(b-\varepsilon)}$ v negativni smeri okrog $f(b)$, dokler se ne prilegata $f$ ali $g$. Če se po koncu vrtenja obe zavrteni daljici prilegata sliki iste funkcije, kot na sliki \ref{fig:presecno_daljica_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer nas zanima še relativna usmerjenost teh odsekov. Označimo končni legi zgornjih daljic z vektorjema $\overrightarrow{a}$ in $\overrightarrow{b}$, kjer za smer vzamemo smer krivulje $f$ oziroma $g$ na tem intervalu. To smo storili na sliki \ref{fig:presecno_daljica_2}. Zanima nas ali kažeta vektorja v komponento $K$ ali iz nje. Presečno število komponente definiramo kot $1$, če velja $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{b}$ glede na $K$ različni ali pa velja $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{b}$ glede na $K$ enaki. Sicer je presečno število komponente enako $-1$. 
+Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = f([a, b])$, za $a,\ b \in (0, 1),\ a < b.$ Prav tako obstaja tak $\varepsilon > 0$, da sta preseka zaprtih krogel z unijo krivulj $\overline{K(f(a), \varepsilon)} \cap (f(I) \cup g(I))$ in $\overline{K(f(b), \varepsilon)} \cap (f(I) \cup g(I))$ linearni triodi s stičišči krakov v $f(a)$ oz. $f(b).$ Linearna trioda je trioda, ki ima za krake daljice. Za določitev presečnega števila najprej preverimo, ali je prišlo do prečkanja preslikav. Zato zavrtimo daljico $\overline{f(a)f(a+\varepsilon)}$ v pozitivni smeri okrog $f(a)$ in daljico $\overline{f(b)f(b-\varepsilon)}$ v negativni smeri okrog $f(b)$, dokler se ne prilegata sliki $f$ ali $g$. Če se po koncu vrtenja obe zavrteni daljici prilegata sliki iste preslikave, kot na sliki \ref{fig:presecno_daljica_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer nas zanima še relativna usmerjenost teh odsekov. Označimo končni legi zgornjih daljic z vektorjema $\overrightarrow{a}$ in $\overrightarrow{b}$, kjer za smer vzamemo smer slike $f$ oziroma $g$ na tem intervalu. To smo storili na sliki \ref{fig:presecno_daljica_2}. Zanima nas ali kažeta vektorja v komponento $K$ ali iz nje. Presečno število komponente definiramo kot $1$, če velja $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{b}$ glede na $K$ različni ali pa velja $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{b}$ glede na $K$ enaki. Sicer je presečno število komponente enako $-1$. 
 
 \begin{figure}[h!]
 \begin{minipage}{0.45\textwidth}
@@ -260,7 +260,7 @@ Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = 
 \end{minipage} 
 \end{figure}
 
-Tako smo definirali presečno število komponente, a preden nadaljujemo, opazimo še, da lahko v zadnjem primeru, ko je $K \approx J$ in $\ind[K]{f}{g} \neq 0$ presečno število določimo kar z obravnavo usmerjenosti smernih vektorjev v enem oglišču $K$. Označimo kot zgoraj vektor $\overrightarrow{a}$, a zdaj nadaljujmo z vrtenjem v pozitivni smeri okrog $f(a)$, dokler se vektor spet ne prilega $f$ ali $g$. Dobljeni vektor, ki mu smer kot prej določimo glede na krivuljo, ki se ji prilega, označimo s $\overrightarrow{c}$. Ta primer prikazuje slika \ref{fig:presecno_daljica_3}. Velja, da je $\ind[K]{f}{g}$ enako $1$, če je $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{c}$ glede na $K$ enaki ali $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{c}$ glede na $K$ različni.  Sicer je presečno število enako $-1$. 
+Tako smo definirali presečno število komponente, a preden nadaljujemo, opazimo še, da lahko v zadnjem primeru, ko je $K \approx J$ in $\ind[K]{f}{g} \neq 0$ presečno število določimo kar z obravnavo usmerjenosti smernih vektorjev v enem oglišču $K$. Označimo kot zgoraj vektor $\overrightarrow{a}$, a zdaj nadaljujmo z vrtenjem v pozitivni smeri okrog $f(a)$, dokler se vektor spet ne prilega sliki $f$ ali $g$. Dobljeni vektor, ki mu smer kot prej določimo glede na krivuljo, ki se ji prilega, označimo s $\overrightarrow{c}$. Ta primer prikazuje slika \ref{fig:presecno_daljica_3}. Velja, da je $\ind[K]{f}{g}$ enako $1$, če je $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{c}$ glede na $K$ enaki ali $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{c}$ glede na $K$ različni.  Sicer je presečno število enako $-1$. 
 
 \begin{figure}[h!]
 \centering
@@ -284,14 +284,14 @@ Tako smo definirali presečno število komponente, a preden nadaljujemo, opazimo
 \label{fig:presecno_daljica_3}
 \end{figure}
 
-Kot presečno število kosoma linearnih krivulj lahko zdaj definiramo 
+Kot presečno število kosoma linearnih preslikav lahko zdaj definiramo 
 \[
 \ind{f}{g} = \sum_{K\ \text{komponenta}} \ind[K]{f}{g}.
 \]
 
 Poglejmo si naslednjo lemo, ki bo omogočala lažjo obravnavo presečnega števila.
 \begin{lema}\label{le:trikotnik}
-Naj bosta $f$ in $\widetilde{f}$ kosoma linearni in naj se razlikujeta le v poti med $f(a)$ in $f(b)$, kjer sta $a,\ b \in (0, 1),\ a<b$ taki točki, da je $f$ med njima linearna, $\widetilde{f}$ pa med tema točkama sestavljata le dve daljici. Če leži trikotnik med omenjenimi daljicami v celoti znotraj $X \setminus \{g(0), g(1)\},$ je $\ind{f}{g} = \ind{\widetilde{f}}{g}$. 
+Naj bosta $f$ in $\widetilde{f}$ kosoma linearni preslikavi in naj se razlikujeta le na intervalu $(a, b)$, kjer sta $a,\ b \in (0, 1),\ a<b$. Na tem intervalu naj bo $f$ linearna, sliko $\widetilde{f}$ pa naj sestavljata le dve daljici. Če leži trikotnik med omenjenimi daljicami v celoti znotraj $X \setminus \{g(0), g(1)\},$ je $\ind{f}{g} = \ind{\widetilde{f}}{g}$. 
 \end{lema}
 
 \begin{figure}[h!]
@@ -308,11 +308,11 @@ Naj bosta $f$ in $\widetilde{f}$ kosoma linearni in naj se razlikujeta le v poti
 \end{figure}
 
 \proof
-Označimo omenjeni trikotnik s $T$. Dovolj je gledati preseke $f,\ \widetilde{f}$ in $g$ na območju T, saj se drugje $f$ in $\widetilde{f}$ ujemata. Ker je tudi $g$ kosoma linearna, si najprej pogledamo kako lahko usmerjena daljica $D$, ki seka $T$, vpliva na presečni števili. Kot prikazuje spodnja slika sta možnosti naslednji.
+Označimo omenjeni trikotnik s $T$. Dovolj je gledati preseke slik $f,\ \widetilde{f}$ in $g$ na območju T, saj se drugje $f$ in $\widetilde{f}$ ujemata. Ker je tudi $g$ kosoma linearna, si najprej pogledamo kako lahko usmerjena daljica $D$, ki seka $T$, vpliva na presečni števili. Kot prikazuje spodnja slika sta možnosti naslednji.
 
-Lahko sta začetna in končna točka $D$ zunaj $T$. Tedaj $D$ bodisi seka dvakrat $\widetilde{f}$ in nikoli $f$ bodisi vsako po enkrat. A ker daljica $D$ ohranja svojo smer, prav tako pa sta $f$ in $\widetilde{f}$ enako usmerjeni, se v prvem primeru spremembi presečnega števila $\widetilde{f}$ in $g$ izničita, v drugem pa sta spremembi obeh presečnih števil enaki ($+1$ ali $-1$).
+Lahko sta začetna in končna točka $D$ zunaj $T$. Tedaj $D$ bodisi seka dvakrat sliko $\widetilde{f}$ in nikoli slike $f$ bodisi vsako po enkrat. A ker ima daljica $D$ konstantno smer, prav tako pa sta sliki $f$ in $\widetilde{f}$ enako usmerjeni, se v prvem primeru spremembi presečnega števila $\widetilde{f}$ in $g$ izničita, v drugem pa sta spremembi obeh presečnih števil enaki ($+1$ ali $-1$).
 
-Druga možnost je, da daljica $D$ začne zunaj $T$, konča pa znotraj. Tedaj mora po predpostavki obstajati neka druga daljica, skozi katero $g$ zapusti $T$, in vpliv tega primera na presečni števili je enak kot prej. Spremembi obeh presečnih števil sta zopet enaki.
+Druga možnost je, da daljica $D$ začne zunaj $T$, konča pa znotraj. Tedaj mora po predpostavki obstajati neka druga daljica, skozi katero slika $g$ zapusti $T$, in vpliv tega primera na presečni števili je enak kot prej. Spremembi obeh presečnih števil sta zopet enaki.
 
 
 \begin{center}
@@ -351,7 +351,7 @@ Druga možnost je, da daljica $D$ začne zunaj $T$, konča pa znotraj. Tedaj mor
 \end{center}
 
 
-Ostane obravnavati primer, ko se $g$ ujema s katero krivuljo v kosoma linearnem odseku. Če ta odsek ne vključuje niti $f(a)$ niti $f(b)$, je njegov vpliv na presečni števili podoben že obravnavanim primerom in ima tako enaki spremembi za obe. V primeru, da sta tako $f(a)$ kot $f(b)$ del skupnega odseka, sprememb presečnih števil na območju trikotnika $T$ ni in tako trditev leme zopet velja. Zadnja možnost, ko je le en izmed $f(a)$ in $f(b)$ del skupnega odseka, potrebuje nadaljno ločitev primerov. Ti primeri so podobni že opisanim in vsi vodijo do željene trditve, da sta spremembi obeh presečnih števil na območju trikotnika $T$ enaki.
+Ostane obravnavati primer, ko se slika $g$ ujema s katero krivuljo v kosoma linearnem odseku. Če ta odsek ne vključuje niti $f(a)$ niti $f(b)$, je njegov vpliv na presečni števili podoben že obravnavanim primerom in ima tako enaki spremembi za obe. V primeru, da sta tako $f(a)$ kot $f(b)$ del skupnega odseka, sprememb presečnih števil na območju trikotnika $T$ ni in tako trditev leme zopet velja. Zadnja možnost, ko je le ena izmed $f(a)$ in $f(b)$ del skupnega odseka, potrebuje nadaljno ločitev primerov. Ti primeri so podobni že opisanim in vsi vodijo do željene trditve, da sta spremembi obeh presečnih števil na območju trikotnika $T$ enaki.
 \endproof
 
 S pomočjo leme \ref{le:trikotnik} lahko dokažemo naslednjo ključno trditev glede dobre definiranosti presečnega števila.
@@ -361,7 +361,7 @@ S pomočjo leme \ref{le:trikotnik} lahko dokažemo naslednjo ključno trditev gl
 \proof
 Naj bo $H$ homotopija med kosoma linearnima $f$ in $\widetilde{f}$, za katero veljajo predpostavke iz trditve. Označimo s $S\subset X$ območje v ravnini, omejeno s krivuljama $f(I)$ in $\widetilde{f}(I)$, za katerega velja $\{g(0), g(1)\} \cap S = \emptyset$. Ker je $H$ kosoma linearna, velja, da lahko $S$ razdelimo na končno število trikotnikov -- med katerimi so lahko nekateri degenerirani -- v katere slika $H$ linearno. 
 
-Definiramo lahko zaporedje preslikav, ki slikajo v $S$, in jih dobimo pri homotopiji med $f$ in $\widetilde{f}$. Začnemo s $f_0 = f$. Nadaljujemo s $f_1$, ki jo dobimo tako, da si izberemo poljuben trikotnik v $S$, ki ima eno izmed stranic na sliki $f_0$ in nato del preslikave $f_0$, ki slika v to stranico, zamenjamo s preslikavo, ki slika isti interval v ostali dve stranici izbranega trikotnika. Tako spremenjeno $f_0$ označimo z $f_1$. Izbrani trikotnik označimo kot že uporabljenega. Induktivno nato definiramo $f_{k+1}$ iz $f_k$ s spremembo dela preslikave preko enega, še ne uporabljenega trikotnika. Po končnem številu korakov pridemo za nek $N \in \N$ do preslikave $f_N = \widetilde{f}$, kjer postopek ustavimo.
+Definiramo lahko zaporedje preslikav, ki slikajo v $S$, in jih dobimo pri homotopiji med $f$ in $\widetilde{f}$. Začnemo s $f_0 = f$. Nadaljujemo s $f_1$, ki jo dobimo tako, da si izberemo poljuben trikotnik v $S$, ki ima eno izmed stranic na sliki $f_0$ in nato del preslikave $f_0$, ki slika v to stranico, zamenjamo s preslikavo, ki slika isti interval v ostali dve stranici izbranega trikotnika. Tako spremenjeno $f_0$ označimo s $f_1$. Za izbrani trikotnik rečemo, da je že bil uporabljen. Induktivno nato definiramo $f_{k+1}$ iz $f_k$ s spremembo dela preslikave preko enega, še ne uporabljenega trikotnika. Po končnem številu korakov pridemo za nek $N \in \N$ do preslikave $f_N = \widetilde{f}$, kjer postopek ustavimo.
 
 Sedaj uporabimo lemo \ref{le:trikotnik}, ki nam pove, da sta presečni števili $\ind{f_i}{g}$ in $\ind{f_{i-1}}{g}$ enaki za poljuben $i\in \{1, 2, \ldots , N\}$, saj za vse trikotnike $T$ iz $S$ velja $\{g(0), g(1) \} \cap T = \emptyset$. To pomeni, da se presečno število pri prehodih med preslikavami v zaporedju ohranja. Zato velja $\ind{f}{g} = \ind{\widetilde{f}}{g}$.
 \endproof
@@ -374,7 +374,9 @@ V splošnem lahko torej definiramo presečno število na naslednji način. Naj b
 
 Uporabimo zdaj presečno število v okviru tem diplomske naloge. Najprej si poglejmo rotacijo množice okrog neke točke v ravnini.
 
-Za lažji zapis in računanje, si v tem razdelku ravnino predstavljamo kot kompleksno ravnino. Naj bosta $A \subset \C$ in $x \in \C$ poljubna. Definiramo $A_x$ kot rotacijo množice $A$ okrog $x$, natančneje $A_x = \{ y \in \C \mid \exists z \in A: y = k(z-x) + x\}$, kjer je $k = e^{i\pi / 3}$. Primer rotacije prikazuje slika \ref{fig:rotacija_osnovna}. Če je $A$ orientiran lok, $A_x$ orientiramo tako, da je začetna točka loka $A_x$ slika začetne točke loka $A$ pri rotaciji.
+Za lažji zapis in računanje, si v tem razdelku ravnino predstavljamo kot kompleksno ravnino. Hkrati dovolimo uporabo presečnega števila na paru usmerjenih ravninskih krivulj. Vrednost, ki jo tako presečno število predstavlja, je enako presečnemu številu preslikav $I \to \C$, ki se ??brez ustavljanja?? slikata v ti krivulji in za kateri velja, da sta sliki vrednosti $0$ začetni točki krivulj.
+
+Naj bosta $A \subset \C$ in $x \in \C$ poljubna. Definiramo $A_x$ kot rotacijo množice $A$ okrog $x$, natančneje $A_x = \{ y \in \C \mid \exists z \in A: y = k(z-x) + x\}$, kjer je $k = e^{i\pi / 3}$. Primer rotacije prikazuje slika \ref{fig:rotacija_osnovna}. Če je $A$ orientiran lok, $A_x$ orientiramo tako, da je začetna točka loka $A_x$ slika začetne točke loka $A$ pri rotaciji.
 
 \begin{figure}[h!]
 \centering
@@ -383,7 +385,7 @@ Za lažji zapis in računanje, si v tem razdelku ravnino predstavljamo kot kompl
 \label{fig:rotacija_osnovna}
 \end{figure}
 
-Naj bo $A$ orientiran lok v kompleksni ravnini, $\partial A = \{a_1, a_2\}$ pa njegovi oglišči. Za $x\in \C$ je $\ind{A}{A_x}$ dobro definirano, če je $\partial A \cap A_x = \emptyset = A \cap (\partial A)_x$. Dokažimo še naslednjo lemo, v kateri presečno število $ind(A, A_x)$ obravnavamo kot funkcijo točke $x \in \C$ okoli katere zavrtimo $A$, torej $\ind{A}{A_x} \colon \C \to \Z$.
+Naj bo $A$ orientiran lok v kompleksni ravnini, $\partial A = \{a_1, a_2\}$ pa njegovi oglišči. Za $x\in \C$ je $\ind{A}{A_x}$ dobro definirano, če je $\partial A \cap A_x = \emptyset = A \cap (\partial A)_x$. Dokažimo še naslednjo lemo, v kateri presečno število $\ind{A}{A_x}$ obravnavamo kot funkcijo točke $x \in \C$ okoli katere zavrtimo $A$, torej $\ind{A}{A_x} \colon \C \to \Z$.
 
 \begin{lema}\label{le:lema2}
 \begin{enumerate}
@@ -398,7 +400,7 @@ Naj bo $A$ orientiran lok v kompleksni ravnini, $\partial A = \{a_1, a_2\}$ pa n
 \proof
 Vsako točko leme dokažemo posebej, pri dokazu pa bomo uporabili lastnost, da je presečno število dobro definirano preko kosoma linearnih aproksimacij krivulj. Tako lahko dokaz naredimo le za kosoma linearna $A$ in $A_x$.
 
-$(1)$ Zveznost je lokalna lastnost, zato nas zanimajo le možne spremembe pri majhnih spremembah točke $x$. Pokažimo, da se pri takih dogodkih presečno število ne bo spremenilo. Edini položaj krivulj, kjer lahko pri majhnih spremembah točke $x$, kakšna točka preseka izgine ali nastane je, da se krivulji sekata v točki $K$ nelinearnosti ene izmed krivulj ter se v tej točki ne prečkata. V tem primeru je $\ind[K]{A}{A_x}=0$. Po tresljaju točke $x$ se lahko zgodi, da v okolici $K$ ne bo več nobene točke preseka, kar pomeni, da se presečno število ni spremenilo. Lahko pa v okolici $K$ nastane med krivuljama trikotnik. Tako obstajata zdaj dve točki preseka, a ker je relativna smer krivulje, ki predstavlja dve stranici trikotnika, na drugo krivuljo v obeh presečiščih različna, imata presečni števili obeh presečišč različna predznaka. Ko ju seštejemo se torej izničita. Tako smo pokazali, da je pri dovolj majhnih tresljajih točke $x$ presečno število konstantno. Zato je število $\ind{A}{A_x}$ kot funkcija $x$ zvezno.
+$(1)$ Zveznost je lokalna lastnost, zato nas zanimajo le možne spremembe pri majhnih spremembah točke $x$. Pokažimo, da se pri takih dogodkih presečno število ne bo spremenilo. Edini položaj krivulj, kjer lahko pri majhnih spremembah točke $x$, kakšna točka preseka izgine ali nastane je, da se krivulji sekata v točki $z_0$ nelinearnosti ene izmed krivulj ter se v tej točki ne prečkata. V tem primeru je $\ind[\{z_0\}]{A}{A_x}=0$. Po tresljaju točke $x$ se lahko zgodi, da v okolici $z_0$ ne bo več nobene točke preseka, kar pomeni, da se presečno število ni spremenilo. Lahko pa v okolici $z_0$ nastane med krivuljama trikotnik. Tako obstajata zdaj dve točki preseka, a ker je relativna smer krivulje, ki predstavlja dve stranici trikotnika, na drugo krivuljo v obeh presečiščih različna, imata presečni števili obeh presečišč različna predznaka. Ko ju seštejemo se torej izničita. Tako smo pokazali, da je pri dovolj majhnih tresljajih točke $x$ presečno število konstantno. Zato je število $\ind{A}{A_x}$ kot funkcija $x$ zvezna.
 
 $(2)$ V primeru, da je presečno število nedefinirano imamo dve možnosti. Za nek $i \in \{1, 2\}$ je lahko: 
 \begin{itemize}
@@ -548,10 +550,10 @@ Do večjih sprememb pride pri rotaciji krivulje, ki smo jo v ravnini označevali
 
 Hitro vidimo, da ima definirana rotacija željeno lastnost, a opazimo tudi, da se v ravninskem primeru razlikuje od prejšnje definicije. Zdaj je namreč pri $n=2$ rotacija $A_x$ sestavljena iz 2 krivulj, ki ustrezata rotacijama $A$ v pozitivno in negativno smer. Nadalje v višjih dimenzijah $A_x$ ni več krivulja. Omenjena primera sta predstavljena na slikah \ref{fig:rotacija_sprem_ravnina} in \ref{fig:rotacija_sprem_prostor}, ki prikazujeta rotacijo daljice v ravnini in prostoru. Pojavi se torej potreba po novi definiciji presečnega števila za krivuljo in ploskev. Poglejmo si pristop v prostoru $\R^3$.
 
-Naj bosta torej zdaj $f \colon I \to X \subset \R^3$ in $g \colon I^2 \to X$. Zanju naj velja, da se ne sekata v robnih točkah poljubne slike, natančneje mora veljati $\{f(0), f(1)\} \cap g(I^2) = \emptyset$ in $\{g(x, y) \mid x \in \{0, 1\} \text{ ali } y \in \{0, 1\} \} \cap f(I) = \emptyset$. To lastnost smo predpostavili, da je presečno število za $f$ in $g$ lahko dobro definirano. Definiramo ga zopet s pomočjo kosoma linearnih aproksimacij, ki obstajajo po izreku o simplicialni aproksimaciji. Naj bosta torej $\widetilde{f} \simeq f \colon I \to X \setminus \{g(x, y) \mid x \in \{0, 1\} \text{ ali } y \in \{0, 1\} \}$ in $\widetilde{g} \simeq g\colon I^2 \to X \setminus \{f(0), f(1)\}$ kosoma linearni preslikavi in naj njuni homotopiji s $f$ in $g$ mirujeta na robu. Presek njunih slik naj bo končen in tako sestavljen iz unije posameznih točk. Če to za neko komponento preseka ne drži, lahko z dovolj malo perturbacijo poljubne preslikave dosežemo, da ostale komponente preseka ostanejo točke, opazovana komponenta pa se v točko spremeni. Naj bo $K = \{x\} \in \widetilde{f}(I) \cap \widetilde{g}(I^2)$ poljubna komponenta preseka. Tedaj obstajajo $a,\ b$ in $c \in I$, da velja $\widetilde{f}(a) = x$ ter $\widetilde{g}(b, c) = x$. Z $v$ označimo smerni vektor $\widetilde{f}$ v točki $a$, s $u_1$ in $u_2$ pa smerna vektorja koordinatnih krivulj $\widetilde{g}$ v točki $(b, c)$. Presečno število komponente $K$ defniramo kot
+Naj bosta torej zdaj $f \colon I \to X \subset \R^3$ in $g \colon I^2 \to X$. Zanju naj velja, da se ne sekata v robnih točkah poljubne slike, natančneje mora veljati $\{f(0), f(1)\} \cap g(I^2) = \emptyset$ in $\{g(x, y) \mid x \in \{0, 1\} \text{ ali } y \in \{0, 1\} \} \cap f(I) = \emptyset$. To lastnost smo predpostavili, da je presečno število za $f$ in $g$ lahko dobro definirano. Definiramo ga zopet s pomočjo kosoma linearnih aproksimacij, ki obstajajo po izreku o simplicialni aproksimaciji. Naj bosta torej $\widetilde{f} \simeq f \colon I \to X \setminus \{g(x, y) \mid x \in \{0, 1\} \text{ ali } y \in \{0, 1\} \}$ in $\widetilde{g} \simeq g\colon I^2 \to X \setminus \{f(0), f(1)\}$ kosoma linearni preslikavi in naj njuni homotopiji s $f$ in $g$ mirujeta na robu. Presek njunih slik naj bo končen in tako sestavljen iz unije posameznih točk. Če to za neko komponento preseka ne drži, lahko z dovolj malo perturbacijo poljubne preslikave dosežemo, da ostale komponente preseka ostanejo točke, opazovana komponenta pa se v točko spremeni. Naj bo $K = \{x\} \in \widetilde{f}(I) \cap \widetilde{g}(I^2)$ poljubna komponenta preseka. Tedaj obstajajo $a,\ b$ in $c \in I$, da velja $\widetilde{f}(a) = x$ ter $\widetilde{g}(b, c) = x$. Z $\overrightarrow{v}$ označimo smerni vektor standardno usmerjene slike $\widetilde{f}$ v točki $a$, z $\overrightarrow{u_1}$ in $\overrightarrow{u_2}$ pa smerna vektorja koordinatnih krivulj slike $\widetilde{g}$ v točki $(b, c)$. Presečno število komponente $K$ defniramo kot
 \begin{equation*}
 \ind[K]{\widetilde{f}}{\widetilde{g}} = \begin{cases}
-1; &u_1,\ u_2 \text{ in } v \text{ tvorijo pozitivno orientirano bazo prostora,}\\
+1; &\overrightarrow{u_1},\ \overrightarrow{u_2} \text{ in } \overrightarrow{v} \text{ tvorijo pozitivno orientirano bazo prostora,}\\
 -1; &\text{sicer}.
 \end{cases}
 \end{equation*}
