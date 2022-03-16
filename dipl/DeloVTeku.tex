@@ -78,13 +78,13 @@ Za začetek ponovimo in vpeljimo nekatere pojme, ki jih bomo uporabljali pri raz
 
 \subsection{Terminologija}
 
-Tekom naloge bomo pogosto iskali točke, ki tvorijo oglišča enakostraničnega trikotnika. To lastnost točk $x,\ y$ in $z$ bomo na krajše zapisali kot $xyz \sim \triangle$. Nadalje bomo za točko $x \in X$ rekli da je \emph{ogliščna točka} danega objekta $X$, če obstajata taki točki $y,\ z \in X$, da $xyz \sim \triangle$.
+Tekom naloge bomo pogosto iskali točke, ki tvorijo oglišča enakostraničnega trikotnika. To lastnost točk $x,\ y$ in $z$ bomo na krajše zapisali kot $xyz \sim \triangle$. Nadalje bomo za točko $x \in X$ rekli da je \emph{ogliščna točka} danega objekta $X$, če obstajata taki točki $y$ in $z \in X$, da $xyz \sim \triangle$.
 
-Ker si bomo natančneje pogledali dogajanje v ravnini, ponovimo definicijo Jordanove krivulje.
+Ker si bomo natančneje ogledali dogajanje v ravnini, ponovimo definicijo Jordanove krivulje.
 \begin{definicija}
 \emph{Jordanova krivulja} je sklenjena ravninska krivulja brez samopresečišč. Dobimo jo kot sliko vložitve $f\colon \mathbb{S}^1 \hookrightarrow \R^2$.
 \end{definicija}
-Glavni izrek glede Jordanovih krivulj je Jordanov izrek, ki nam pove, da Jordanova krivulja $J$ deli $\R^2 \setminus J$ na dve komponenti za povezanost. Natanko ena izmed teh komponent je omejena in tej komponenti bomo rekli kar \emph{notranjost Jordanove krivulje J}. V nalogi bomo tudi uporabljali pojem homotopnih preslikav, zato si oglejmo njihovo definicijo.
+Glavni izrek glede Jordanovih krivulj je Jordanov izrek, ki nam pove, da Jordanova krivulja $J$ deli $\R^2 \setminus J$ na dve komponenti za povezanost. Natanko ena izmed teh komponent je omejena in tej komponenti bomo rekli kar \emph{notranjost Jordanove krivulje J}. V nalogi bomo uporabljali tudi pojem homotopnih preslikav, zato si oglejmo njihovo definicijo.
 \begin{definicija}
 Naj bosta $X$ in $Y$ podmnožici ravnine in $f,\ g\colon X \to Y$ zvezni funkciji. Homotopija med  $f$ in $g$ je zvezna preslikava
 \[
@@ -92,7 +92,7 @@ H\colon X \times [0, 1] \to Y,
 \]
  za katero velja $H(x, 0) = f(x)$ in $H(x, 1) = g(x)$ za vse $x\in X$.
 \end{definicija}
-Za homotopijo rečemo, da miruje na robu, če $\forall t \in [0, 1]$ velja $H(x, t) = f(x) = g(x)$ za vsako točko $x \in \partial X$ na robu množice $X$.
+Za homotopijo rečemo, da miruje na robu, če za vsak $t \in [0, 1]$ in za vsako točko $x \in \partial X$ na robu množice $X$ velja $H(x, t) = f(x) = g(x)$.
 
 Definirajmo še strukturo, ki se bo izkazala za zelo pomembno pri obravnavi naše teme.
 \begin{definicija}
@@ -107,9 +107,9 @@ Po spoznanih pojmih si oglejmo izrek, ki nam poda odgovor na začetni problem is
 Vsaka Jordanova krivulja v ravnini vsebuje oglišča enakostraničnega trikotnika.
 \end{izrek}
 \proof
-Naj bo $J$ poljubna Jordanova krivulja v ravnini in $S$ poljubna točka v notranjosti J. Naj bo $C$ krožnica z najmanjših polmerom s središčem v $S$, ki se dotika $J$. Označimo z $x$ točko v preseku $C \cap J$ ter naj bosta $y_0$ in $z_0$ taki točki na $C$, da $xy_0z_0 \sim \triangle$. Definiramo še spremenljivi točki $y$ in $z$ v ravnini, tako da za $x,\ y$ in $z$ vselej velja $xyz \sim \triangle$. Ko bomo torej premikali eno izmed $y$ ali $z$, se bo premikala tudi druga, tako da se bo ohranjal enakostranični trikotnik $xyz$. Za njuni začetni vrednosti definiramo $y_0$ in $z_0$ na $C$.
+Naj bo $J$ poljubna Jordanova krivulja v ravnini in $S$ poljubna točka v notranjosti J. Naj bo $C$ krožnica z najmanjšim polmerom s središčem v $S$, ki se dotika $J$. Označimo z $x$ točko v preseku $C \cap J$ ter naj bosta $y_0$ in $z_0$ taki točki na $C$, da $xy_0z_0 \sim \triangle$. Definiramo še spremenljivi točki $y$ in $z$ v ravnini, tako da za $x,\ y$ in $z$ vselej velja $xyz \sim \triangle$. Ko bomo torej premikali eno izmed $y$ ali $z$, se bo premikala tudi druga, tako da se bo ohranjal enakostranični trikotnik $xyz$. Njuni začetni vrednosti definiramo kot $y_0$ in $z_0$.
 
-Sedaj pri fiksnem $x$ začnimo povečevati polmer krožnice $C$. Tako se $y$ in $z$ oddaljujeta od $x$. Postopek ustavimo, ko $y$ ali $z$ pristaneta na $J$ in na tej točki označimo $y_1 = y$ ter $z_1 = z$. Brez škode za splošnost lahko rečemo $y \in J$. Za konec premaknimo $y$ zvezno do točke $y_2$, ki je točka na $J$, ki je od $x$ najbolj oddaljena. Omenjene točke so označene na naslednji skici.
+Sedaj pri fiksnem $x$ začnemo povečevati polmer krožnice $C$. Tako se $y$ in $z$ oddaljujeta od $x$. Postopek ustavimo, ko $y$ ali $z$ pristaneta na $J$ in na tej točki označimo $y_1 = y$ ter $z_1 = z$. Brez škode za splošnost lahko rečemo $y \in J$. Za konec premaknemo $y$ zvezno do točke $y_2$, ki je točka na $J$, ki je od $x$ najbolj oddaljena. Omenjene točke so označene na naslednji skici.
 
 \begin{center}
 \begin{tikzpicture}
@@ -146,7 +146,7 @@ Ko se je $y$ premikal od $y_1$ do $y_2$ je tudi $z$ opisal zvezno pot od $z_1$ d
 \end{center}
 \endproof
 
-Izrek nam zagotovi obstoj včrtanega enakostraničnega trikotnika na ravninski Jordanovi krivulji. Koliko takšnih trikotnikov pa lahko najdemo? Naslednja posledica, katere dokaz sledi iz dokaza izreka \ref{izr:zacetni}, nam poda karakterizacijo ogliščnih točk Jordanove krivulje.
+Izrek nam zagotovi obstoj enakostraničnega trikotnika na ravninski Jordanovi krivulji. Koliko takšnih trikotnikov pa lahko najdemo? Naslednja posledica, katere dokaz sledi iz dokaza izreka \ref{izr:zacetni}, nam poda karakterizacijo ogliščnih točk Jordanove krivulje.
 \begin{posledica}\label{posl:jordan}
 Naj bo $J$ Jordanova krivulja v ravnini in $x \in J$. Točka $x$ je ogliščna točka $J$ natanko tedaj, ko obstajata točki $y$ in $z$, ki ležita na $J$ ali v njegovi notranjosti, tako da velja $xyz \sim \triangle$.
 \end{posledica}
@@ -156,30 +156,30 @@ Preden se konkretneje poglobimo v iskanje enakostraničnih trikotnikov si poglej
 Naj bosta $T$ poljuben trikotnik in $J$ Jordanova krivulja v ravnini. Tedaj $J$ vsebuje oglišča trikotnika, ki je podoben $T$.
 \end{trditev}
 \proof
-Postopek dokaza je enak postopku dokaza izreka \ref{izr:zacetni}, zato ga še enkrat ponovimo in izpostavimo spremembe. Krožnico $C$ in točko $x$ definiramo kot prej, spremenljivi točki $y$ in $z$ pa tokrat skupaj z $x$ vselej tvorita oglišča trikotnika podobnega $T$ tako, da je največji notranji kot $T$ pri oglišču $x$. Njuna začetna položaja $y_0$ in $z_0$ naj ležita na $C$. Definirajmo še točki $x_3$ in $y_2$ kot točki na $J$, ki sta najbolj oddaljeni.
+Postopek dokaza je enak postopku dokaza izreka \ref{izr:zacetni}, zato ga še enkrat ponovimo in izpostavimo spremembe. Krožnico $C$ in točko $x$ definiramo kot prej, le da $x$ skupaj s spremenljivima točkama $y$ in $z$ tokrat vselej tvori oglišča trikotnika podobnega $T$. Ta trikotnik naj bo obrnej tako, da je njegov največji notranji kot pri oglišču $x$. Začetna položaja točk $y$ in $z$ naj bosta točki $y_0$ in $z_0$, ki ležita na $C$. Definirajmo še točki $x_3$ in $y_2$ kot točki na $J$, ki sta najbolj oddaljeni.
 
-Zdaj izvedemo zvezna premikanja točk $y$ in $z$ kot v omenjenem dokazu in na koncu naredimo še naslednji premik. Pri fiksnem $y = y_2$ po krivulji $J$ premaknimo $x$ do $x_3$. Skupna pot točke $z$ je tako sestavljena iz treh zveznih lokov. Ker je $yz$ (ob koncu $y_2z_3$) najdaljša stranica trikotnika, po podobnem premisleku kot prej sledi, da mora $z_3$ ležati na $J$ ali v neomejeni komponenti $\R^2 \setminus J$. Željeni rezultat sledi.
+Zdaj izvedemo zvezna premikanja točk $y$ in $z$ kot v omenjenem dokazu in na koncu naredimo še naslednji premik. Pri fiksnem $y = y_2$ po krivulji $J$ premaknemo $x$ do $x_3$. Skupna pot točke $z$ je tako sestavljena iz treh zveznih lokov. Ker je $yz$ (ob koncu $y_2z_3$) najdaljša stranica trikotnika, po podobnem premisleku kot prej sledi, da mora $z_3$ ležati na $J$ ali v neomejeni komponenti $\R^2 \setminus J$. Željeni rezultat sledi.
 \endproof
 
-V tem razdelku smo videli konstruktivne dokaze za obstoj enakostraničnih trikotnikov na Jordanovih krivuljah. Da bi se tega lotili bolj sistematično, potrebujemo nekaj novih ravninskih pojmov in objektov.
+V tem razdelku smo videli konstruktivne dokaze za obstoj enakostraničnih trikotnikov na Jordanovih krivuljah. Da se lahko iskanja lotimo bolj sistematično, potrebujemo nekaj novih ravninskih pojmov in objektov.
 
 
 %--------------------------------------------------------------
 \section{Presečno število}\label{razd:presecno}
-Glavni nov pojem, ki ga potrebujemo za nadaljne delo je pojem presečnega števila krivulj. Za dani preslikavi v ravnino, bi radi načrtno prešteli točke preseka njunih slik. S takšnih znanjem bomo kasneje lahko natančno povedali, kje bodo obstajali enakostranični trikotniki.
+Glavni nov pojem, ki ga potrebujemo za nadaljne delo, je pojem presečnega števila preslikav. Za dani preslikavi v ravnino, bi radi načrtno prešteli točke preseka njunih slik. S takšnih znanjem bomo kasneje lahko natančno povedali, kje bodo obstajali enakostranični trikotniki.
 
-Naj bo $I = [0, 1] \subset \R$ in naj bosta $f,\ g \colon I \to X \subset \R^2,$ taki preslikavi, da zadoščata pogoju
+Naj bo $I = [0, 1] \subset \R$ in naj bosta $f,\ g \colon I \to X \subset \R^2$ taki preslikavi, da zadoščata pogoju
 \begin{equation}\label{eq:razl_rob}
 \{f(0), f(1)\} \cap g(I) = \emptyset \quad \text{in} \quad \{g(0), g(1)\} \cap f(I) = \emptyset.
 \end{equation}
 Pojem presečnega števila lahko dobro definiramo le za pare preslikav, ki ustrezajo \eqref{eq:razl_rob}, zato se omejimo na takšne.
 
-Naj bosta za začetek $f$ in $g$ kosoma linearni preslikavi, ki ustrezata \eqref{eq:razl_rob}. Njuni sliki opremimo s standardno usmerjenostjo od slike vrednosti $0$ do slike vrednosti $1$. Ker se poljubni daljici sekata v kvečjemu eni komponenti, velja da je $f(I) \cap g(I)$ zaprta množica, ki vsebuje kvečjemu končno mnogo komponent za povezanost. Te komponente so lahko točke ali kosoma linearne krivulje. Presečno število preslikav bomo definirali kot vsoto presečnih števil komponent preseka njunih slik.V ta namen si najprej oglejmo, kako definiramo presečno število posamezne komponente.
+Naj bosta za začetek $f$ in $g$ kosoma linearni preslikavi, ki ustrezata \eqref{eq:razl_rob}. Njuni sliki opremimo s standardno usmerjenostjo od slike vrednosti $0$ do slike vrednosti $1$. Ker se poljubni daljici sekata v kvečjemu eni komponenti, velja da je $f(I) \cap g(I)$ zaprta množica, ki vsebuje kvečjemu končno mnogo komponent za povezanost. Te komponente so lahko točke ali kosoma linearne krivulje. Presečno število preslikav bomo definirali kot vsoto presečnih števil komponent preseka njunih slik. V ta namen si najprej oglejmo, kako definiramo presečno število posamezne komponente.
 
-Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo definirali presečno število komponente in ga označili z $\ind[K]{f}{g}$. Najprej denimo, da je $K$ le točka, torej $K = \{x\}.$ Za primer ko je $x$ točka nelinearnosti $f$ ali $g$ in se sliki preslikav v $x$ ne prečkata, primer tega je prikazan na sliki \ref{fig:presecno_tocka_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer označimo smerna vektorja slik preslikav $f$ in $g$ v točki $x$ kot $\overrightarrow{s_f}$ in $\overrightarrow{s_g}$, kar prikazuje slika \ref{fig:presecno_tocka_2}. Kot presečno število komponente definiramo
+Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo definirali presečno število komponente in ga označili z $\ind[K]{f}{g}$. Najprej denimo, da je $K$ le točka, torej $K = \{x\}$ za nek $x$ v ravnini. V primeru, ko je $x$ točka nelinearnosti $f$ ali $g$ in se sliki preslikav v $x$ ne prečkata, primer tega je prikazan na sliki \ref{fig:presecno_tocka_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer označimo smerna vektorja slik preslikav $f$ in $g$ v točki $x$ kot $\overrightarrow{s_f}$ in $\overrightarrow{s_g}$, kar prikazuje slika \ref{fig:presecno_tocka_2}. Kot presečno število komponente definiramo
 \begin{equation*}
 \ind[K]{f}{g} = \begin{cases}
-1; & \overrightarrow{s_f},\ \overrightarrow{s_g}\ \text{tvorita pozitivno orientirano bazo,}\\
+1; & \overrightarrow{s_f}\ \text{in}\ \overrightarrow{s_g}\ \text{tvorita pozitivno orientirano bazo,}\\
 -1; &\text{sicer}.
 \end{cases}
 \end{equation*}
@@ -213,7 +213,7 @@ Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo defin
 \end{minipage}
 \end{figure}
 
-Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = f([a, b])$, za $a,\ b \in (0, 1),\ a < b.$ Prav tako obstaja tak $\varepsilon > 0$, da sta preseka zaprtih krogel z unijo krivulj $\overline{K(f(a), \varepsilon)} \cap (f(I) \cup g(I))$ in $\overline{K(f(b), \varepsilon)} \cap (f(I) \cup g(I))$ linearni triodi s stičišči krakov v $f(a)$ oz. $f(b).$ Linearna trioda je trioda, ki ima za krake daljice. Za določitev presečnega števila najprej preverimo, ali je prišlo do prečkanja preslikav. Zato zavrtimo daljico $\overline{f(a)f(a+\varepsilon)}$ v pozitivni smeri okrog $f(a)$ in daljico $\overline{f(b)f(b-\varepsilon)}$ v negativni smeri okrog $f(b)$, dokler se ne prilegata sliki $f$ ali $g$. Če se po koncu vrtenja obe zavrteni daljici prilegata sliki iste preslikave, kot na sliki \ref{fig:presecno_daljica_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer nas zanima še relativna usmerjenost teh odsekov. Označimo končni legi zgornjih daljic z vektorjema $\overrightarrow{a}$ in $\overrightarrow{b}$, kjer za smer vzamemo smer slike $f$ oziroma $g$ na tem intervalu. To smo storili na sliki \ref{fig:presecno_daljica_2}. Zanima nas ali kažeta vektorja v komponento $K$ ali iz nje. Presečno število komponente definiramo kot $1$, če velja $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{b}$ glede na $K$ različni ali pa velja $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{b}$ glede na $K$ enaki. Sicer je presečno število komponente enako $-1$. 
+Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = f([a, b])$, za $a,\ b \in (0, 1),\ a < b.$ Prav tako obstaja tak $\varepsilon > 0$, da sta preseka zaprtih krogel z unijo krivulj $\overline{K(f(a), \varepsilon)} \cap (f(I) \cup g(I))$ in $\overline{K(f(b), \varepsilon)} \cap (f(I) \cup g(I))$ linearni triodi s stičišči krakov v $f(a)$ oz. $f(b).$ Linearna trioda je trioda, ki ima za krake daljice. Za določitev presečnega števila najprej preverimo, ali je prišlo do prečkanja preslikav. Zato zavrtimo daljico $\overline{f(a)f(a+\varepsilon)}$ v pozitivni smeri okrog $f(a)$ in daljico $\overline{f(b)f(b-\varepsilon)}$ v negativni smeri okrog $f(b)$, dokler se ne prilegata sliki $f$ ali $g$. Če se po koncu vrtenja obe zavrteni daljici prilegata sliki iste preslikave, kot na sliki \ref{fig:presecno_daljica_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer nas zanima še relativna usmerjenost teh odsekov. Označimo končni legi zgornjih daljic z vektorjema $\overrightarrow{a}$ in $\overrightarrow{b}$, kjer za smer vzamemo smer slike $f$ oziroma $g$ na tem intervalu. To smo storili na sliki \ref{fig:presecno_daljica_2}. Zanima nas, ali kažeta vektorja v komponento $K$ ali iz nje. Presečno število komponente definiramo kot $1$, če velja $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{b}$ glede na $K$ različni ali pa velja $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{b}$ glede na $K$ enaki. Sicer je presečno število komponente enako $-1$. 
 
 \begin{figure}[h!]
 \begin{minipage}{0.45\textwidth}
@@ -260,7 +260,7 @@ Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = 
 \end{minipage} 
 \end{figure}
 
-Tako smo definirali presečno število komponente, a preden nadaljujemo, opazimo še, da lahko v zadnjem primeru, ko je $K \approx J$ in $\ind[K]{f}{g} \neq 0$ presečno število določimo kar z obravnavo usmerjenosti smernih vektorjev v enem oglišču $K$. Označimo kot zgoraj vektor $\overrightarrow{a}$, a zdaj nadaljujmo z vrtenjem v pozitivni smeri okrog $f(a)$, dokler se vektor spet ne prilega sliki $f$ ali $g$. Dobljeni vektor, ki mu smer kot prej določimo glede na krivuljo, ki se ji prilega, označimo s $\overrightarrow{c}$. Ta primer prikazuje slika \ref{fig:presecno_daljica_3}. Velja, da je $\ind[K]{f}{g}$ enako $1$, če je $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{c}$ glede na $K$ enaki ali $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}, \overrightarrow{c}$ glede na $K$ različni.  Sicer je presečno število enako $-1$. 
+Tako smo definirali presečno število komponente. Preden nadaljujemo, opazimo še, da lahko v zadnjem primeru, ko je $K \approx J$ in $\ind[K]{f}{g} \neq 0$ presečno število določimo kar z obravnavo usmerjenosti smernih vektorjev pri enem oglišču $K$. Označimo kot zgoraj vektor $\overrightarrow{a}$, a zdaj nadaljujemo z vrtenjem v pozitivni smeri okrog $f(a)$, dokler se daljica spet ne prilega sliki $f$ ali $g$. Dobljeni vektor, ki mu smer kot prej določimo glede na krivuljo, ki se ji prilega, označimo s $\overrightarrow{c}$. Ta primer prikazuje slika \ref{fig:presecno_daljica_3}. Velja, da je $\ind[K]{f}{g}$ enako $1$, če je $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{c}$ glede na $K$ enaki ali pa je $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{c}$ glede na $K$ različni.  Sicer je presečno število enako $-1$. 
 
 \begin{figure}[h!]
 \centering
@@ -359,7 +359,7 @@ S pomočjo leme \ref{le:trikotnik} lahko dokažemo naslednjo ključno trditev gl
 Če obstaja kosoma linearna homotopija $H\colon I \times I \to X \setminus \{g(0), g(1)\}$ med kosoma linearnima preslikavama $f$ in $\widetilde{f}$, ki miruje na robu, je $\ind{f}{g} = \ind{\widetilde{f}}{g}$.
 \end{trditev}
 \proof
-Naj bo $H$ homotopija med kosoma linearnima $f$ in $\widetilde{f}$, za katero veljajo predpostavke iz trditve. Označimo s $S\subset X$ območje v ravnini, omejeno s krivuljama $f(I)$ in $\widetilde{f}(I)$, za katerega velja $\{g(0), g(1)\} \cap S = \emptyset$. Ker je $H$ kosoma linearna, velja, da lahko $S$ razdelimo na končno število trikotnikov -- med katerimi so lahko nekateri degenerirani -- v katere slika $H$ linearno. 
+Naj bo $H$ homotopija med kosoma linearnima $f$ in $\widetilde{f}$, za katero veljajo predpostavke trditve. Označimo s $S\subset X$ območje v ravnini, omejeno s krivuljama $f(I)$ in $\widetilde{f}(I)$, za katerega velja $\{g(0), g(1)\} \cap S = \emptyset$. Ker je $H$ kosoma linearna, velja, da lahko $S$ razdelimo na končno število trikotnikov -- med katerimi so lahko nekateri degenerirani -- v katere slika $H$ linearno. 
 
 Definiramo lahko zaporedje preslikav, ki slikajo v $S$, in jih dobimo pri homotopiji med $f$ in $\widetilde{f}$. Začnemo s $f_0 = f$. Nadaljujemo s $f_1$, ki jo dobimo tako, da si izberemo poljuben trikotnik v $S$, ki ima eno izmed stranic na sliki $f_0$ in nato del preslikave $f_0$, ki slika v to stranico, zamenjamo s preslikavo, ki slika isti interval v ostali dve stranici izbranega trikotnika. Tako spremenjeno $f_0$ označimo s $f_1$. Za izbrani trikotnik rečemo, da je že bil uporabljen. Induktivno nato definiramo $f_{k+1}$ iz $f_k$ s spremembo dela preslikave preko enega, še ne uporabljenega trikotnika. Po končnem številu korakov pridemo za nek $N \in \N$ do preslikave $f_N = \widetilde{f}$, kjer postopek ustavimo.
 
@@ -368,7 +368,7 @@ Sedaj uporabimo lemo \ref{le:trikotnik}, ki nam pove, da sta presečni števili 
 
 Zdaj lahko sklepamo naslednje. Naj bosta $f$ in $\widetilde{f}$ taki kosoma linearni preslikavi, da med njima obstaja homotopija $H$, ki miruje na robu in slika v $X \setminus \{ g(0), g(1)\}$. Tedaj velja $\ind{f}{g} = \ind{\widetilde{f}}{g}$, saj lahko $H$ po izreku o simplicialni aproksimaciji aproksimiramo s kosoma linearno homotopijo, za katero zdaj vemo, da ohranja presečno število. 
 
-V splošnem lahko torej definiramo presečno število na naslednji način. Naj bosta $f,\ g\colon I \to X$ poljubni ravninski preslikavi, ki ustrezata pogoju \eqref{eq:razl_rob}. Tedaj obstajata $\widetilde{f} \simeq f\colon I \to X \setminus \{g(0), g(1)\}$ in $\widetilde{g} \simeq g\colon I \to X \setminus \{f(0), f(1)\}$ kosoma linearni preslikavi, katerih homotopiji s $f$ in $g$ mirujeta na robu. Tedaj definiramo $\ind{f}{g} := \ind{\widetilde{f}}{\widetilde{g}}$. Po vsem prej pokazanem je presečno število dobro definirano, saj se pri prehajanju med homotopnimi kosoma linearnimi preslikavami ohranja.
+V splošnem lahko torej definiramo presečno število na naslednji način. Naj bosta $f,\ g\colon I \to X$ poljubni ravninski preslikavi, ki ustrezata pogoju \eqref{eq:razl_rob}. Tedaj obstajata $\widetilde{f} \simeq f\colon I \to X \setminus \{g(0), g(1)\}$ in $\widetilde{g} \simeq g\colon I \to X \setminus \{f(0), f(1)\}$ kosoma linearni preslikavi, katerih homotopiji s $f$ in $g$ mirujeta na robu. Njuno presečno število definiramo kot $\ind{f}{g} := \ind{\widetilde{f}}{\widetilde{g}}$. Po vsem prej pokazanem je presečno število dobro definirano, saj se pri prehajanju med homotopnimi kosoma linearnimi preslikavami ohranja.
 
 Tekom naloge bomo presečno število uporabljali tudi na parih usmerjenih krivulj. Za krivulji $A$ in $B$ izberemo regularni parametrizaciji $f_A \colon I \to A$ in $f_B \colon I \to B$, ki slikata vrednost $0$ v začetni točki krivulj. Za presečno število krivulj definiramo $\ind{A}{B} := \ind{f_A}{f_B}$.
 
@@ -385,15 +385,15 @@ Za lažji zapis in računanje, si v tem razdelku ravnino predstavljamo kot kompl
 \label{fig:rotacija_osnovna}
 \end{figure}
 
-Naj bo $A$ orientiran lok v kompleksni ravnini, $\partial A = \{a_1, a_2\}$ pa njegovi oglišči. Za $x\in \C$ je $\ind{A}{A_x}$ dobro definirano, če je $\partial A \cap A_x = \emptyset = A \cap (\partial A)_x$. Dokažimo še naslednjo lemo, v kateri presečno število $\ind{A}{A_x}$ obravnavamo kot funkcijo točke $x \in \C$ okoli katere zavrtimo $A$, torej $\ind{A}{A_x} \colon \C \to \Z$.
+Naj bo $A$ orientiran lok v kompleksni ravnini $\partial A = \{a_1, a_2\}$ pa njegovi oglišči. Za $x\in \C$ je $\ind{A}{A_x}$ dobro definirano, če je $\partial A \cap A_x = \emptyset = A \cap (\partial A)_x$. Dokažimo še naslednjo lemo, v kateri presečno število $\ind{A}{A_x}$ obravnavamo kot funkcijo točke $x \in \C$ okoli katere zavrtimo $A$, torej $\ind{A}{A_x} \colon \C \to \Z$.
 
 \begin{lema}\label{le:lema2}
 \begin{enumerate}
 \item Kjer je $\ind{A}{A_x}$ definirano, je zvezno v $x$.
 \item Če je $\ind{A}{A_x}$ nedefinirano, potem obstaja tak $y \in A$, da $xya_i \sim \triangle$ za $i \in \{1, 2\}$.
-\item Če ne obstajata taka $y,\ z \in A$, da $xyz \sim \triangle$, sta $A$ in $A_x$ disjunktna in zato je $ind(A, A_x) = 0$.
+\item Če ne obstajata taka $y$ in $z \in A$, da $xyz \sim \triangle$, sta $A$ in $A_x$ disjunktna in zato je $ind(A, A_x) = 0$.
 \item Naj bo $B \subset A$ lok z isto orientacijo kot $A$, za katerega velja $(A \setminus B) \cap A_x = \emptyset$ in $(A_x \setminus B_x) \cap A = \emptyset$. Če sta $\ind{A}{A_x}$ in $\ind{B}{B_x}$ definirana, sta enaka.
-\item Če je $S \subset A$ daljica in $x \in S, x \notin \partial S$, velja $\ind{S}{S_x} \neq 0$.
+\item Če je $S \subset A$ daljica in $x \in S,\ x \notin \partial S$, velja $\ind{S}{S_x} \neq 0$.
 \end{enumerate}
 \end{lema}
 
@@ -408,7 +408,7 @@ $(2)$ V primeru, da je presečno število nedefinirano imamo dve možnosti. Za n
 \item $(a_i)_x  = \alpha \in A$ za nek $\alpha \in A$. Tudi tokrat velja $a_ix\alpha \sim \triangle$.
 \end{itemize}
 
-$(3)$ To točko dokažemo z dokazom obratne implikacije. Denimo, da $A$ in $A_x$ nista disjunktna. Označimo $\alpha \in A \cap A_x$ poljubno točko iz preseka. Tedaj je $\alpha \in A$ in obstaja $\gamma \in A$, da velja $\gamma_x = \alpha$. S temi oznakami velja $\alpha x \gamma \sim \triangle$.
+$(3)$ To točko dokažemo z dokazom obratne implikacije. Denimo, da $A$ in $A_x$ nista disjunktna. Označimo $\alpha \in A \cap A_x$ poljubno točko iz preseka. Tedaj je $\alpha \in A$ in obstaja $\gamma \in A$, da velja $\gamma_x = \alpha$. Pri teh oznakah velja $\alpha x \gamma \sim \triangle$.
 
 $(4)$ Ker je presečno število krivulj $A$ in $A_x$ definirano kot vsota presečnih števil komponent njunega preseka in so vse te vsebovane v $B$, velja $\ind{A}{A_x} = \ind{B}{B_x}$.
 
@@ -418,7 +418,7 @@ $(5)$ Ker je $S$ daljica, se $S$ in $S_x$ sekata le v točki $x$, za katero velj
 
 %--------------------------------------------------------------
 \section{Dognanja v ravnini}
-V prejšnjih poglavjih smo spoznali pojme, ki nam bodo sedaj v pomoč pri natančnem odkrivanju dogajanja v ravnini. Izkaže se da lahko v tem okolju na krivuljah najdemo mnogo trikotnikov. Poglejmo si natančnejše ugotovitve in kako pridemo do njih.
+V prejšnjih poglavjih smo spoznali pojme, ki nam bodo sedaj v pomoč pri natančnem odkrivanju dogajanja v ravnini. Izkaže se, da lahko v tem okolju na krivuljah najdemo mnogo trikotnikov. Poglejmo si natančnejše ugotovitve in kako pridemo do njih.
 \subsection{Glavni izrek} 
 Vemo že, da lahko na poljubni Jordanovi krivulji v ravnini najdemo enakostraničen trikotnik. Prav tako smo spoznali karakterizacijo ogliščnih točk take krivulje. A ne znamo še povedati koliko takšnih točk bo krivulja z gotovostjo imela. Pri odgovoru na to vprašanje bo pomagal naslednji izrek, ki sicer ne govori o Jordanovih krivuljah, ampak o enakostraničnih trikotnikih na ravninskih triodah.
 \begin{izrek}\label{izr:glavni}
@@ -426,11 +426,11 @@ Trioda $T$  v ravnini vsebuje oglišča enakostraničnega trikotnika, ki ima za 
 \end{izrek}
 Triodo $T$ bomo v tem poglavju pogosto omenjali, zato z $L_1,\ L_2$ in $L_3$ označimo še njene krake, s $P$ pa stičišče teh krakov. Pri dokazu izreka si bomo pomagali z dvema lemama. In sicer z lemo \ref{le:lema2}, ki smo jo že spoznali, in z naslednjo lemo.
 \begin{lema}\label{le:protislovje}
-Predpostavimo, da za triodo $T$ izrek \ref{izr:glavni} ne drži. Tedaj obstaja trioda $T'$ z istimi končnimi točkami $e_1,\ e_2$ in $e_3$, ki vsebuje daljico $S$, za katero velja, da je eno izmed njenih krajišč točka $e_1$. Tedaj tudi za triodo $T'$ ne obstaja enakostraničen trikotnik, ki bi imel za eno izmed oglišč točko $e_1,\ e_2$ ali $e_3$.
+Predpostavimo, da za triodo $T$ izrek \ref{izr:glavni} ne drži. Tedaj obstaja trioda $T'$ z istimi končnimi točkami $e_1,\ e_2$ in $e_3$, ki vsebuje daljico $S$, za katero velja, da je eno izmed njenih krajišč točka $e_1$. Tedaj ne obstaja niti enakostraničen trikotnik z oglišči na $T'$, ki bi imel za eno izmed oglišč točko $e_1,\ e_2$ ali $e_3$.
 \end{lema}
 
 \proof
-Zopet si ravnino, ki vsebuje $T$, predstavljajmo kot kompleksno ravnino $\C$. Tako velja $T \times T \subset \C \times \C = \C^2$. Za $j \in \{1, 2, 3\}$ definiram $E_j$ unije parov kompleksnih ravnin v $\C^2$ kot
+Zopet si ravnino, ki vsebuje $T$, predstavljajmo kot kompleksno ravnino $\C$. Tako velja $T \times T \subset \C \times \C = \C^2$. Za $j \in \{1, 2, 3\}$ definiramo $E_j$ pomnožice prostora $\C^2$ kot
 \[
 E_j = \{(w, z) \mid z = e_j + k(w-e_j)\ \text{ali}\ z = e_j + k^{-1}(w-e_j)\},
 \]
