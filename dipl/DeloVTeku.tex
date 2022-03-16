@@ -27,7 +27,7 @@
 
 %  V povzetku na kratko opišite vsebinske rezultate dela. Sem ne sodi razlaga organizacije dela --
 %  v katerem poglavju/razdelku je kaj, pač pa le opis vsebine.
-\povzetek{}
+\povzetek{Povzetek bo tu}
 
 %  Prevod slovenskega povzetka v angleščino.
 \abstract{Abstract goes here}
@@ -69,12 +69,12 @@
 
 %---------------------------------------------------------------
 \section{Uvod}
-Tu zapišem uvod.
+Že več kot stoletje se matematiki ukvarjajo z na videz preprostim vprašanjem -- ali na vsaki Jordanovi krivulji obstajajo oglišča kvadrata. Ta problem je preprost v formulaciji in hitro razumljiv, a je vseeno do danes ostal nerešen. Prvi ga je leta 1911 postavil nemški matematik Otto Toeplitz \cite{splet_idaho} in v letih, ki so sledila, so matematiki prišli do različnih delnih rezultatov. Podrobno so se raziskala tudi podobna vprašanja, kot na primer iskanje trikotnikov in drugih objektov na Jordanovih krivuljah. V diplomski nalogi si bomo ogledali rezultate pri iskanju trikotnikov in kako smo do njih prišli.
 
 %---------------------------------------------------------------
 \section{Osnove}
 
-Na začetku ponovimo in vpeljimo nekatere pojme, ki jih bomo uporabljali pri raziskovanju teme.
+Za začetek ponovimo in vpeljimo nekatere pojme, ki jih bomo uporabljali pri raziskovanju teme.
 
 \subsection{Terminologija}
 
@@ -370,13 +370,13 @@ Zdaj lahko sklepamo naslednje. Naj bosta $f$ in $\widetilde{f}$ taki kosoma line
 
 V splošnem lahko torej definiramo presečno število na naslednji način. Naj bosta $f,\ g\colon I \to X$ poljubni ravninski preslikavi, ki ustrezata pogoju \eqref{eq:razl_rob}. Tedaj obstajata $\widetilde{f} \simeq f\colon I \to X \setminus \{g(0), g(1)\}$ in $\widetilde{g} \simeq g\colon I \to X \setminus \{f(0), f(1)\}$ kosoma linearni preslikavi, katerih homotopiji s $f$ in $g$ mirujeta na robu. Tedaj definiramo $\ind{f}{g} := \ind{\widetilde{f}}{\widetilde{g}}$. Po vsem prej pokazanem je presečno število dobro definirano, saj se pri prehajanju med homotopnimi kosoma linearnimi preslikavami ohranja.
 
+Tekom naloge bomo presečno število uporabljali tudi na parih usmerjenih krivulj. Za krivulji $A$ in $B$ izberemo regularni parametrizaciji $f_A \colon I \to A$ in $f_B \colon I \to B$, ki slikata vrednost $0$ v začetni točki krivulj. Za presečno število krivulj definiramo $\ind{A}{B} := \ind{f_A}{f_B}$.
+
 \subsection{Rotacija krivulje in presečno število}
 
 Uporabimo zdaj presečno število v okviru tem diplomske naloge. Najprej si poglejmo rotacijo množice okrog neke točke v ravnini.
 
-Za lažji zapis in računanje, si v tem razdelku ravnino predstavljamo kot kompleksno ravnino. Hkrati dovolimo uporabo presečnega števila na paru usmerjenih ravninskih krivulj. Vrednost, ki jo tako presečno število predstavlja, je enako presečnemu številu preslikav $I \to \C$, ki se ??brez ustavljanja?? slikata v ti krivulji in za kateri velja, da sta sliki vrednosti $0$ začetni točki krivulj.
-
-Naj bosta $A \subset \C$ in $x \in \C$ poljubna. Definiramo $A_x$ kot rotacijo množice $A$ okrog $x$, natančneje $A_x = \{ y \in \C \mid \exists z \in A: y = k(z-x) + x\}$, kjer je $k = e^{i\pi / 3}$. Primer rotacije prikazuje slika \ref{fig:rotacija_osnovna}. Če je $A$ orientiran lok, $A_x$ orientiramo tako, da je začetna točka loka $A_x$ slika začetne točke loka $A$ pri rotaciji.
+Za lažji zapis in računanje, si v tem razdelku ravnino predstavljamo kot kompleksno ravnino. Naj bosta $A \subset \C$ in $x \in \C$ poljubna. Definiramo $A_x$ kot rotacijo množice $A$ okrog $x$, natančneje $A_x = \{ y \in \C \mid \exists z \in A: y = k(z-x) + x\}$, kjer je $k = e^{i\pi / 3}$. Primer rotacije prikazuje slika \ref{fig:rotacija_osnovna}. Če je $A$ orientiran lok, $A_x$ orientiramo tako, da je začetna točka loka $A_x$ slika začetne točke loka $A$ pri rotaciji.
 
 \begin{figure}[h!]
 \centering
@@ -591,15 +591,15 @@ Denimo da obstajajo tri točke $e_1,\ e_2$ in $e_3 \in M$, ki niso ogliščne to
 
 %-------------------------------------------------------------
 \section{Včrtani štirikotniki}
-Poleg trikotnikov lahko na Jordanovih krivuljah iščemo tudi drugačne objekte. Oglejmo si kakšne do kakšnih sklepov lahko pridemo ob iskanju šritikotnikov na Jordanovih krivuljah v ravnini. Na tem področju so nekatera vprašanja še danes odprta. 
+Oglejmo si še do kakšnih sklepov lahko pridemo ob iskanju šritikotnikov na Jordanovih krivuljah v ravnini. Na tem področju so nekatera vprašanja še danes odprta. 
 
-Ne ve se še, ali lahko na poljubni Jordanovi krivulji najdemo oglišča kvadrata. To vprašanje je že leta 1911 postavil nemški matematik Otto Toeplitz, a še do danes ostaja nerešeno v povsem splošni obliki. Obstajajo rezultati, do katerih lahko pridemo ob dodatnih omejitvah glede krivulje na kateri iščemo kvadrat. Eden izmed najbolj znanih takšnih rezultatov je naslednji izrek.
+Ne ve se še, ali lahko na poljubni Jordanovi krivulji najdemo oglišča kvadrata. A obstajajo rezultati, do katerih lahko pridemo ob dodatnih omejitvah glede krivulje na kateri iščemo kvadrat. Eden izmed najbolj znanih takšnih rezultatov je naslednji izrek.
 
 \begin{izrek}[Stromquistov izrek]
 Če je Jordanova krivulja $J$ ``dovolj lepa'', vsebuje oglišča kvadrata.
 \end{izrek}
 
-Izraz ``dovolj lepa'' krivulja $J$ pomeni, da za vsako točko $P$ na $J$ obstaja koordinatni sistem ravnine, v katerem lahko okolico točke $P$ na $J$ dobimo kot graf $y = f(x)$ za zvezno funkcijo $f$. Idejno si lahko rezultat tega izreka predstavljamo kot trditev, da na vsaki Jordanovi krivulji, ki smo jo uspeli s pisalom narisati na papir, obstajajo oglišča kvadrata. Dokaza izreka si ne bomo ogledali. K iskanju kvadratov na Jordanovih krivuljah lahko pristopimo tudi s pomočjo simetrij, ki nam sicer omejijo možne krivulje, a hkrati zmanjšajo težavnost iskanja kvadratov samih. Oglejmo si naslednji rezultat na to temo.
+Izraz ``dovolj lepa'' krivulja $J$ pomeni, da za vsako točko $P$ na $J$ obstaja koordinatni sistem ravnine, v katerem lahko okolico točke $P$ na $J$ dobimo kot graf $y = f(x)$ za zvezno funkcijo $f$. Idejno si lahko rezultat tega izreka predstavljamo kot trditev, da na vsaki Jordanovi krivulji, ki smo jo uspeli s pisalom narisati na papir, obstajajo oglišča kvadrata. Dokaza izreka si ne bomo ogledali, lahko pa ga najdemo v viru \cite{izrek_stromquist}. K iskanju kvadratov na Jordanovih krivuljah lahko pristopimo tudi s pomočjo simetrij, ki nam sicer omejijo možne krivulje, a hkrati zmanjšajo težavnost iskanja kvadratov samih. Oglejmo si naslednji rezultat na to temo.
 
 \begin{trditev}\label{trd:kvadrat}
 Vsaka Jordanova krivulja $J$, ki je simetrična glede na izhodišče, vsebuje oglišča kvadrata.
@@ -680,7 +680,8 @@ A nas zanima množica neurejenih parov točk na $J$, zato moramo enotski kvadrat
 \label{fig:prvi_pregib}
 \end{figure}
 
-Da najdemo objekt, ki je homeomorfen dobljenemu trikotniku, ga moramo najprej prerezati vzdolž premice $y = 1 - x$. Sedaj lahko zlepimo prvotna kraka trikotnika in dobimo kvadrat, z nasprotno orientiranim parom stranic. Takšen kvadrat je homeomorfen Mobiusovem traku brez robnih točk, saj kvadrat ni vseboval točk drugega para stranic. Opisani postopek ponazarja zaporedje korakov na sliki \ref{fig:koraki_do_Mob}. Injektivnost preslikave $f$ je tako ekvivalentna vložitvi Mobiusovega traku v $\R^3$, kjer se vse robne točke traka preslikajo v Jordanovo krivuljo v ravnini $z=0$.
+Da najdemo objekt, ki je homeomorfen dobljenemu trikotniku, ga moramo najprej prerezati vzdolž premice $y = 1 - x$. Sedaj lahko zlepimo prvotna kraka trikotnika in dobimo kvadrat, z nasprotno orientiranim parom stranic. Takšen kvadrat je homeomorfen M\"obiusovem traku brez robnih točk, saj kvadrat ni vseboval točk drugega para stranic. Opisani postopek ponazarja zaporedje korakov na sliki \ref{fig:koraki_do_Mob}. Z $M$ označimo M\"obiusov trak in z $g \colon M \to X$ inverz opisane enačitve točk $X$ in $M$. Preslikava $f \circ g$ tako slika M\"obiusov trak v prostor $\R^3$. Sliko M\"obiusovega traku lahko z notranjostjo krivulje $J$ v ravnini $z=0$ dopolnimo do objekta homeomorfnega projektivni ravnini $\R \mathbb{P} ^2$. Injektivnost preslikave $f$, in s tem tudi $f \circ g$, bi tako pomenila obstoj vložitve $\R\mathbb{P}^2$ v $\R^3$, za kar pa vemo, da ne obstaja.
+
 
 \begin{figure}[h!]
 \hfill
@@ -726,7 +727,7 @@ Da najdemo objekt, ki je homeomorfen dobljenemu trikotniku, ga moramo najprej pr
 \end{figure}
 
 
-Tega ne moremo storiti in zato obstajata para $\{P, Q\} \neq \{S, T\}$ z enako sliko, ki vsebujeta vsa oglišča pravokotnika na $J$.
+Zato obstajata para $\{P, Q\} \neq \{S, T\}$ točk na $J$ z enako sliko. Točke v teh parih so oglišča pravokotnika na $J$.
 
 Opisani postopek je pokazal veljavnost naslednje trditve.
 \begin{trditev}
@@ -734,10 +735,6 @@ Vsaka Jordanova krivulja $J$ vsebuje oglišča pravokotnika.
 \end{trditev}
 
 
-
-%------------------------------------------------------------
-\section{Zaključek}
-Na koncu omenim stvari, ki bi se jih še lahko dotaknil, a se jih nisem.
 
 
 %------------------------------------------------------------
@@ -751,6 +748,12 @@ Na koncu omenim stvari, ki bi se jih še lahko dotaknil, a se jih nisem.
 
 \bibitem{clanek_meyerson}
 M.~D.~Meyerson, \emph{Equilateral triangles and continuous curves}, Fund.\ Math.\ \textbf{110} (1980) 1--9 
+
+\bibitem{izrek_stromquist}
+W.~Stromquist, \emph{Inscribed squares and square-like quadrilaterals in closed curves}, Mathematika \textbf{36} (1989) 187--197
+
+\bibitem{splet_idaho}
+\emph{Figures Inscribed in Curves}, v: University of Idaho, [ogled 15.~3.~2022], dostopno na \url{https://www.webpages.uidaho.edu/~markn/squares/}.
 
 \end{thebibliography}
 
