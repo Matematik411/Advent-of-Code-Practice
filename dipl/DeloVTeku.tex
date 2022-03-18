@@ -164,17 +164,63 @@ Ker je $\mathring{K}$ v notranjosti $J$, ležijo vse točke $K$ v notranjosti $J
 \endproof
 
 Preden se konkretneje poglobimo v iskanje enakostraničnih trikotnikov si poglejmo še eno lastnost Jordanovih krivulj v ravnini. Velja namreč, da lahko za poljuben trikotnik v ravnini, na njih najdemo trikotnik, ki mu je podoben.
-\begin{trditev}
+\begin{trditev}\label{trd:trik_poljuben}
 Naj bosta $T$ poljuben trikotnik in $J$ Jordanova krivulja v ravnini. Tedaj $J$ vsebuje oglišča trikotnika, ki je podoben $T$.
 \end{trditev}
 \proof
-Postopek dokaza je enak postopku dokaza izreka \ref{izr:zacetni}, zato ga še enkrat ponovimo in izpostavimo spremembe. Krožnico $C$ in točko $x$ definiramo kot prej, le da $x$ skupaj s spremenljivima točkama $y$ in $z$ tokrat vselej tvori oglišča trikotnika podobnega $T$. Ta trikotnik naj bo obrnjen tako, da je njegov največji notranji kot pri oglišču $x$. Začetna položaja točk $y$ in $z$ naj bosta točki $y_0$ in $z_0$, ki ležita na $C$. Definirajmo še točki $x_3$ in $y_2$ kot točki na $J$, ki sta najbolj oddaljeni.
+Postopek dokaza je enak postopku dokaza izreka \ref{izr:zacetni}, zato ga še enkrat ponovimo in izpostavimo spremembe. Krožnico $C$ in točko $x$ definiramo kot prej, le da $x$ skupaj s spremenljivima točkama $y$ in $z$ tokrat vselej tvori oglišča trikotnika podobnega $T$. Ta trikotnik naj bo obrnjen tako, da je njegov največji notranji kot pri oglišču $x$. Začetna položaja točk $y$ in $z$ naj bosta točki $y_0$ in $z_0$, ki ležita na $C$. 
 
-Zdaj izvedemo zvezna premikanja točk $y$ in $z$ kot v omenjenem dokazu in na koncu naredimo še naslednji premik. Pri fiksnem $y = y_2$ po krivulji $J$ premaknemo $x$ do $x_3$. Skupna pot točke $z$ je tako sestavljena iz treh zveznih lokov. Ker je $yz$ (ob koncu $y_2z_3$) najdaljša stranica trikotnika, po podobnem premisleku kot prej sledi, da mora $z_3$ ležati na $J$ ali v neomejeni komponenti $\R^2 \setminus J$. Željeni rezultat sledi.
+\begin{tikzpicture}
+\draw [gray] plot [smooth cycle] coordinates {(0,0) (-2, -0.5) (-4, 0.5) (-5, -2) (-4, -3) (-2, -2.5) (-0.5, -3) (2, -4) (3.5, -2) (4, 0) (2, 1) (1, 0.5)};
+\filldraw (0.423,-0.906) circle[radius=1pt];
+\draw (0.423, -0.906) circle (1);
+\draw (0,0) -- (0.164, -1.872) -- (0.996, -0.087) -- cycle;
+\node [below] at (0.164, -1.872) {$y_0$};
+\node [right] at (0.996, -0.087){$z_0$};
+\node [above] at (0, 0) {$x$};
+
+\draw (-7, 0) -- (-9.658, -2.658) -- (-6.147, -1.638) -- cycle;
+\node at (-7.5, -1.5) {$T$};
+\end{tikzpicture}
+
+Kot prej najprej povečujemo krožnico $C$ v smeri poltraka $xS$ dokler ne pristane eno oglišče trikotnika na $J$. Takrat označimo položaja $y$ in $z$ kot $y_1$ in $z_1$. Definirajmo točki $x_3$ in $y_2$ kot točki na $J$, ki sta najbolj oddaljeni. Premaknimo zdaj $y$ do $y_2$ in ob tej postavitvi trikotnika položaj $z$ kot $z_2$. Pri zadnjem premiku držimo položaj točke $y$ in točko $x$ premaknemo do $x_3$. Končni položaj $z$ označimo kot $z_3$. Ti zaporedni premiki so prikazani na sliki \ref{fig:trik_premiki}.
+
+\begin{figure}
+\begin{minipage}{0.3\textwidth}
+	\begin{tikzpicture}
+	\draw [gray] plot [smooth cycle] coordinates {(0,0) (-2*0.4, -0.5*0.4) (-4*0.4, 0.5*0.4) (-5*0.4, -2*0.4) (-4*0.4, -3*0.4) (-2*0.4, -2.5*0.4) (-0.5*0.4, -3*0.4) (2*0.4, -4*0.4) (3.5*0.4, -2*0.4) (4*0.4, 0) (2*0.4, 1*0.4) (1*0.4, 0.5*0.4)};
+	\draw (0,0) -- (0.164*0.75, -1.872*0.75) -- (0.996*0.75, -0.087*0.75) -- cycle;
+	\node [below] at (0.164*0.75, -1.872*0.75) {$y_1$};
+	\node [right] at (0.996*0.75, -0.087*0.75){$z_1$};
+	\node [above] at (0, 0) {$x$};
+	\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}
+	\begin{tikzpicture}
+	\draw [gray] plot [smooth cycle] coordinates {(0,0) (-2*0.4, -0.5*0.4) (-4*0.4, 0.5*0.4) (-5*0.4, -2*0.4) (-4*0.4, -3*0.4) (-2*0.4, -2.5*0.4) (-0.5*0.4, -3*0.4) (2*0.4, -4*0.4) (3.5*0.4, -2*0.4) (4*0.4, 0) (2*0.4, 1*0.4) (1*0.4, 0.5*0.4)};
+	\draw (0,0) -- (-2, -0.8) -- (0.234, -1.122) -- cycle;
+	\node [below] at (-2, -0.8) {$y_2$};
+	\node [right] at (0.234, -1.122) {$z_2$};
+	\node [above] at (0, 0) {$x$};
+	\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.35\textwidth}
+	\begin{tikzpicture}
+	\draw [gray] plot [smooth cycle] coordinates {(0,0) (-2*0.4, -0.5*0.4) (-4*0.4, 0.5*0.4) (-5*0.4, -2*0.4) (-4*0.4, -3*0.4) (-2*0.4, -2.5*0.4) (-0.5*0.4, -3*0.4) (2*0.4, -4*0.4) (3.5*0.4, -2*0.4) (4*0.4, 0) (2*0.4, 1*0.4) (1*0.4, 0.5*0.4)};
+	\draw (1.6, 0) -- (-2, -0.8) -- (1.686, -1.962) -- cycle;
+	\node [below] at (-2, -0.8) {$y_3$};
+	\node [right] at (1.686, -1.962) {$z_3$};
+	\node [above] at (1.6, 0) {$x_3$};
+	\end{tikzpicture}
+\end{minipage}
+\caption{Premiki trikotnika v dokazu trditve \ref{trd:trik_poljuben}}
+\label{fig:trik_premiki}
+\end{figure}
+
+Skupna pot točke $z$ je tako sestavljena iz treh zveznih lokov ($z_0-z_1-z_2-z_3$). Ker je $yz$ (ob koncu $y_3z_3$) najdaljša stranica trikotnika, po podobnem premisleku kot prej sledi, da mora $z_3$ ležati na $J$ ali v neomejeni komponenti $\R^2 \setminus J$. Želeni rezultat sledi.
 \endproof
 
-V tem razdelku smo videli konstruktivne dokaze za obstoj enakostraničnih trikotnikov na Jordanovih krivuljah. Da se lahko iskanja lotimo bolj sistematično, potrebujemo nekaj novih ravninskih pojmov in objektov.
-
+V tem razdelku smo videli konstruktivne dokaze za obstoj (enakostraničnih) trikotnikov na Jordanovih krivuljah. Da se lahko iskanja lotimo bolj sistematično, potrebujemo nekaj novih ravninskih pojmov in objektov.
 
 %--------------------------------------------------------------
 \section{Presečno število}\label{razd:presecno}
