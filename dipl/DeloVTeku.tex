@@ -6,7 +6,6 @@
 % \documentclass[isrm2]{fmfdelo}
 \usepackage{tikz}
 
-
 % naslednje ukaze ustrezno napolnite
 \avtor{Nejc Zajc}
 
@@ -84,7 +83,11 @@ Ker si bomo natančneje ogledali dogajanje v ravnini, ponovimo definicijo Jordan
 \begin{definicija}
 \emph{Jordanova krivulja} je sklenjena ravninska krivulja brez samopresečišč. Dobimo jo kot sliko vložitve $f\colon \mathbb{S}^1 \hookrightarrow \R^2$.
 \end{definicija}
-Glavni izrek glede Jordanovih krivulj je Jordanov izrek, ki nam pove, da Jordanova krivulja $J$ deli $\R^2 \setminus J$ na dve komponenti za povezanost. Natanko ena izmed teh komponent je omejena in tej komponenti bomo rekli kar \emph{notranjost Jordanove krivulje J}. V nalogi bomo uporabljali tudi pojem homotopnih preslikav, zato si oglejmo njihovo definicijo.
+Glavni izrek glede Jordanovih krivulj je Jordanov izrek.
+\begin{izrek}[Jordanov izrek]
+Naj bo $J$ Jordanova krivulja v ravnini $\R^2$. Komplement krivulje $\R \setminus J$ sestavljata natanko dve komponenti za povezanost. Ena je omejena in ena neomejena. Krivulja $J$ je meja obeh komponent.
+\end{izrek}
+Dokaz izreka lahko najdemo v viru \cite{jordan_wiki}. Za Jordanovo krivuljo $J$ v ravnini bomo omejeni komponenti za povezanost $\R \setminus J$ v nalogi rekli \emph{notranjost Jordanove krivulje $J$}. Uporabljali bomo tudi pojem homotopnih preslikav, zato si oglejmo njihovo definicijo.
 \begin{definicija}
 Naj bosta $X$ in $Y$ podmnožici ravnine in $f,\ g\colon X \to Y$ zvezni funkciji. Homotopija med  $f$ in $g$ je zvezna preslikava
 \[
@@ -96,7 +99,7 @@ Za homotopijo rečemo, da miruje na robu, če za vsak $t \in [0, 1]$ in za vsako
 
 Definirajmo še strukturo, ki se bo izkazala za zelo pomembno pri obravnavi naše teme.
 \begin{definicija}
-Trioda je poljuben podprostor (v $\R^2$) homeomorfen črki T.
+\emph{Trioda} je poljuben podprostor (v $\R^2$) homeomorfen črki T.
 \end{definicija}
 Ekvivalentno lahko triodo definiramo kot unijo treh lokov $L_1,\ L_2$ in $L_3$, ki jim pravimo kraki triode, in so paroma disjunktni z izjemo enega skupnega krajišča, v katerem se vsi trije stikajo. Temu krajišču pravimo stičišče krakov. Ostala označimo zaporedoma z $e_1,\ e_2$ in $e_3$ ter jim pravimo končne točke triode.
 
@@ -109,11 +112,11 @@ Vsaka Jordanova krivulja v ravnini vsebuje oglišča enakostraničnega trikotnik
 \proof
 Naj bo $J$ poljubna Jordanova krivulja v ravnini in $S$ poljubna točka v notranjosti J. Naj bo $C$ krožnica z najmanjšim polmerom s središčem v $S$, ki se dotika $J$. Označimo z $x$ točko v preseku $C \cap J$ ter naj bosta $y_0$ in $z_0$ taki točki na $C$, da $xy_0z_0 \sim \triangle$. Definiramo še spremenljivi točki $y$ in $z$ v ravnini, tako da za $x,\ y$ in $z$ vselej velja $xyz \sim \triangle$. Ko bomo torej premikali eno izmed $y$ ali $z$, se bo premikala tudi druga, tako da se bo ohranjal enakostranični trikotnik $xyz$. Njuni začetni vrednosti definiramo kot $y_0$ in $z_0$.
 
-Sedaj pri fiksnem $x$ začnemo povečevati polmer krožnice $C$. Tako se $y$ in $z$ oddaljujeta od $x$. Postopek ustavimo, ko $y$ ali $z$ pristaneta na $J$ in na tej točki označimo $y_1 = y$ ter $z_1 = z$. Brez škode za splošnost lahko rečemo $y \in J$. Za konec premaknemo $y$ zvezno do točke $y_2$, ki je točka na $J$, ki je od $x$ najbolj oddaljena. Omenjene točke so označene na naslednji skici.
+Sedaj pri fiksnem $x$ začnemo povečevati polmer krožnice $C$ s premikanjem središča vzdolž poltraka $xS$. Tako se $y$ in $z$ oddaljujeta od $x$. Postopek ustavimo, ko $y$ ali $z$ pristaneta na $J$ in na tej točki označimo $y_1 = y$ ter $z_1 = z$. Brez škode za splošnost lahko rečemo $y \in J$. Za konec premaknemo $y$ zvezno do točke $y_2$, ki je točka na $J$, ki je od $x$ najbolj oddaljena. Omenjene točke so označene na naslednji skici.
 
 \begin{center}
 \begin{tikzpicture}
-\draw [gray] plot [smooth cycle] coordinates {(1, -0.4) (0,0) (-1, -0.4) (-1.5, -2) (0,-4) (6, -4) (6.5, -2.2) (5, -1.5) (3.464,-2) (2, -1.8)};
+\draw [gray] plot [smooth] coordinates {(0,0) (-1.5, 1) (-1.5, -2) (0,-4) (6, -4) (6.5, -2.2) (5, -1.5) (3.464,-2) (2, -1.8) (1, 0.5) (0, 0)};
 \filldraw (0,-0.5) circle[radius=1pt];
 \draw (0, -0.5) circle (0.5);
 \draw[dashed] (0, 0) -- (-0.433 * 3.2, -0.75 * 3.2) -- (0.433 * 3.2, -0.75 * 3.2) -- cycle;
@@ -135,7 +138,7 @@ Ko se je $y$ premikal od $y_1$ do $y_2$ je tudi $z$ opisal zvezno pot od $z_1$ d
 
 \begin{center}
 \begin{tikzpicture}
-\draw [gray] plot [smooth cycle] coordinates {(1, -0.4) (0,0) (-1, -0.4) (-1.5, -2) (0,-4) (6, -4) (6.5, -2.2) (5, -1.5) (3.464,-2) (2, -1.8)};
+\draw [gray] plot [smooth] coordinates {(0,0) (-1.5, 1) (-1.5, -2) (0,-4) (6, -4) (6.5, -2.2) (5, -1.5) (3.464,-2) (2, -1.8) (1, 0.5) (0, 0)};
 \draw (0, 0) -- (0, -4) -- (3.464, -2) -- cycle;
 \node [above] at (0, 0) {$x$};
 
@@ -151,12 +154,21 @@ Izrek nam zagotovi obstoj enakostraničnega trikotnika na ravninski Jordanovi kr
 Naj bo $J$ Jordanova krivulja v ravnini in $x \in J$. Točka $x$ je ogliščna točka $J$ natanko tedaj, ko obstajata točki $y$ in $z$, ki ležita na $J$ ali v njegovi notranjosti, tako da velja $xyz \sim \triangle$.
 \end{posledica}
 
+Oglejmo si še posledico, ki si natančneje ogleda okolico opazovane točke na $J$.
+\begin{posledica}
+Naj bo $J$ Jordanova krivulja v ravnini in $x \in J$. Če obstaja tak krog $K$, da leži njegova notranjost $\mathring{K}$ v notranjosti krivulje $J$ in je $K \cap J = \{x\}$, je $x$ ogliščna točka $J$.\\
+V posebnem je vsaka točka na gladki Jordanovi krivulji ogliščna.
+\end{posledica}
+\proof
+Ker je $\mathring{K}$ v notranjosti $J$, ležijo vse točke $K$ v notranjosti $J$ ali na $J$. Na krogu $K$ izberemo točki $y$ in $z$, da velja $xyz \sim \triangle$. Ti dve točki izpolnjujeta vse predpostavke posledice \ref{posl:jordan}, zato je točka $x$ ogliščna točka $J$.
+\endproof
+
 Preden se konkretneje poglobimo v iskanje enakostraničnih trikotnikov si poglejmo še eno lastnost Jordanovih krivulj v ravnini. Velja namreč, da lahko za poljuben trikotnik v ravnini, na njih najdemo trikotnik, ki mu je podoben.
 \begin{trditev}
 Naj bosta $T$ poljuben trikotnik in $J$ Jordanova krivulja v ravnini. Tedaj $J$ vsebuje oglišča trikotnika, ki je podoben $T$.
 \end{trditev}
 \proof
-Postopek dokaza je enak postopku dokaza izreka \ref{izr:zacetni}, zato ga še enkrat ponovimo in izpostavimo spremembe. Krožnico $C$ in točko $x$ definiramo kot prej, le da $x$ skupaj s spremenljivima točkama $y$ in $z$ tokrat vselej tvori oglišča trikotnika podobnega $T$. Ta trikotnik naj bo obrnej tako, da je njegov največji notranji kot pri oglišču $x$. Začetna položaja točk $y$ in $z$ naj bosta točki $y_0$ in $z_0$, ki ležita na $C$. Definirajmo še točki $x_3$ in $y_2$ kot točki na $J$, ki sta najbolj oddaljeni.
+Postopek dokaza je enak postopku dokaza izreka \ref{izr:zacetni}, zato ga še enkrat ponovimo in izpostavimo spremembe. Krožnico $C$ in točko $x$ definiramo kot prej, le da $x$ skupaj s spremenljivima točkama $y$ in $z$ tokrat vselej tvori oglišča trikotnika podobnega $T$. Ta trikotnik naj bo obrnjen tako, da je njegov največji notranji kot pri oglišču $x$. Začetna položaja točk $y$ in $z$ naj bosta točki $y_0$ in $z_0$, ki ležita na $C$. Definirajmo še točki $x_3$ in $y_2$ kot točki na $J$, ki sta najbolj oddaljeni.
 
 Zdaj izvedemo zvezna premikanja točk $y$ in $z$ kot v omenjenem dokazu in na koncu naredimo še naslednji premik. Pri fiksnem $y = y_2$ po krivulji $J$ premaknemo $x$ do $x_3$. Skupna pot točke $z$ je tako sestavljena iz treh zveznih lokov. Ker je $yz$ (ob koncu $y_2z_3$) najdaljša stranica trikotnika, po podobnem premisleku kot prej sledi, da mora $z_3$ ležati na $J$ ali v neomejeni komponenti $\R^2 \setminus J$. Željeni rezultat sledi.
 \endproof
@@ -754,7 +766,10 @@ M.~D.~Meyerson, \emph{Equilateral triangles and continuous curves}, Fund.\ Math.
 W.~Stromquist, \emph{Inscribed squares and square-like quadrilaterals in closed curves}, Mathematika \textbf{36} (1989) 187--197
 
 \bibitem{splet_idaho}
-\emph{Figures Inscribed in Curves}, v: University of Idaho, [ogled 15.~3.~2022], dostopno na \url{https://www.webpages.uidaho.edu/~markn/squares/}.
+\emph{Figures Inscribed in Curves}, v: University of Idaho, [ogled 18.~3.~2022], dostopno na \url{https://www.webpages.uidaho.edu/~markn/squares/}.
+
+\bibitem{jordan_wiki}
+\emph{Jordan curve theorem}, v: Wikipedia, The Free Encyclopedia, [ogled 18.~3.~2022], dostopno na \url{https://en.wikipedia.org/wiki/Jordan_curve_theorem}.
 
 \end{thebibliography}
 
