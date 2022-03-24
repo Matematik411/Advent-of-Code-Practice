@@ -77,7 +77,7 @@ Za začetek ponovimo in vpeljimo nekatere pojme, ki jih bomo uporabljali pri raz
 
 \subsection{Terminologija}
 
-Tekom naloge bomo pogosto iskali točke, ki tvorijo oglišča enakostraničnega trikotnika. To lastnost točk $x,\ y$ in $z$ bomo na krajše zapisali kot $xyz \sim \triangle$. Nadalje bomo za točko $x \in X$ rekl,i da je \emph{ogliščna točka} danega objekta $X$, če obstajata taki točki $y$ in $z \in X$, da $xyz \sim \triangle$.
+Tekom naloge bomo pogosto iskali točke, ki tvorijo oglišča enakostraničnega trikotnika. To lastnost točk $x,\ y$ in $z$ bomo na krajše zapisali kot $xyz \sim \triangle$. Nadalje bomo za točko $x \in X$ rekli, da je \emph{ogliščna točka} danega objekta $X$, če obstajata taki točki $y$ in $z \in X$, da $xyz \sim \triangle$.
 
 Ker si bomo natančneje ogledali dogajanje v ravnini, ponovimo definicijo Jordanove krivulje.
 \begin{definicija}
@@ -110,9 +110,9 @@ Po spoznanih pojmih si oglejmo izrek, ki nam poda odgovor na začetno vprašanje
 Vsaka Jordanova krivulja v ravnini vsebuje oglišča enakostraničnega trikotnika.
 \end{izrek}
 \proof
-Naj bo $J$ poljubna Jordanova krivulja v ravnini in $S$ poljubna točka v notranjosti J. Naj bo $C$ krožnica z najmanjšim polmerom s središčem v $S$, ki se dotika $J$. Označimo z $x$ točko v preseku $C \cap J$ ter naj bosta $y_0$ in $z_0$ taki točki na $C$, da $xy_0z_0 \sim \triangle$. Definiramo še spremenljivi točki $y$ in $z$ v ravnini, tako da za $x,\ y$ in $z$ vselej velja $xyz \sim \triangle$. Ko bomo torej premikali eno izmed $y$ ali $z$, se bo premikala tudi druga, tako da se bo ohranjal enakostranični trikotnik $xyz$. Njuni začetni vrednosti definiramo kot $y_0$ in $z_0$.
+Naj bo $J$ poljubna Jordanova krivulja v ravnini in $S$ poljubna točka v notranjosti J. Naj bo $C$ krožnica s središčem v $S$ in najmanjšim takim polmerom, da se dotika $J$. Označimo z $x$ točko v preseku $C \cap J$ ter naj bosta $y_0$ in $z_0$ taki točki na $C$, da $xy_0z_0 \sim \triangle$. Definiramo še spremenljivi točki $y$ in $z$ v ravnini, tako da za $x,\ y$ in $z$ vselej velja $xyz \sim \triangle$. Ko bomo torej premikali eno izmed $y$ ali $z$, se bo premikala tudi druga, tako da se bo ohranjal enakostranični trikotnik $xyz$. Njuni začetni vrednosti definiramo kot $y_0$ in $z_0$.
 
-Sedaj pri fiksnem $x$ začnemo povečevati polmer krožnice $C$ s premikanjem središča vzdolž poltraka $xS$. Tako se $y$ in $z$ oddaljujeta od $x$. Postopek ustavimo, ko $y$ ali $z$ pristaneta na $J$ in na tej točki označimo $y_1 = y$ ter $z_1 = z$. Brez škode za splošnost lahko rečemo $y \in J$. Za konec premaknemo $y$ vzdolž $J$ zvezno do točke $y_2$, ki je točka na $J$, ki je od $x$ najbolj oddaljena. Omenjene točke so označene na naslednji skici.
+Sedaj pri fiksnem $x$ začnemo povečevati polmer krožnice $C$ s premikanjem središča vzdolž poltraka $xS$. Tako se $y$ in $z$ oddaljujeta od $x$. Postopek ustavimo, ko $y$ ali $z$ pristaneta na $J$ in tedaj označimo $y_1 = y$ ter $z_1 = z$. Brez škode za splošnost lahko rečemo $y \in J$. Za konec premaknemo $y$ vzdolž $J$ zvezno do točke $y_2$, ki je točka na $J$, ki je od $x$ najbolj oddaljena. Omenjene točke so označene na naslednji skici.
 
 \begin{center}
 \begin{tikzpicture}
@@ -126,15 +126,15 @@ Sedaj pri fiksnem $x$ začnemo povečevati polmer krožnice $C$ s premikanjem sr
 \node [left] at (-0.433 * 3.2, -0.75 * 3.2) {$y_1$};
 \node [right] at (0.433 * 3.2, -0.75 * 3.2) {$z_1$};
 
-\filldraw (6, -4) circle [radius=1pt];
-\node [below] at (6, -4) {$y_2$};
+\filldraw (6.48, -3.65) circle [radius=1pt];
+\node [right] at (6.48, -3.65) {$y_2$};
 
 \node [above] at (0, 0) {$x$};
 
 \end{tikzpicture}
 \end{center}
 
-Ko se je $y$ premikal od $y_1$ do $y_2$ je tudi $z$ opisal zvezno pot od $z_1$ do $z_2$. Velja, da je $z_1$ ležal na $J$ ali v njegovi notranjosti. Ker sta $y_2$ ter $z_2$ enako oddaljeni od $x$, leži $z_2$ na $J$ ali v neomejeni komponenti $\R^2 \setminus J$. Torej pot, ki jo je opisal $z$, v neki točki seka $J$. Tedaj velja $xyz \sim \triangle$.
+Ko se je $y$ premikal od $y_1$ do $y_2$, je tudi $z$ opisal zvezno pot od $z_1$ do $z_2$. Velja, da je $z_1$ ležal na $J$ ali v njegovi notranjosti. Ker sta $y_2$ ter $z_2$ enako oddaljeni od $x$, leži $z_2$ na $J$ ali v neomejeni komponenti $\R^2 \setminus J$. Torej pot, ki jo je opisal $z$, v neki točki seka $J$. Tedaj velja $xyz \sim \triangle$.
 
 \begin{center}
 \begin{tikzpicture}
@@ -224,7 +224,7 @@ Pojem presečnega števila lahko dobro definiramo le za pare preslikav, ki ustre
 
 Naj bosta za začetek $f$ in $g$ kosoma linearni preslikavi, ki ustrezata \eqref{eq:razl_rob}. Njuni sliki opremimo s standardno usmerjenostjo od slike vrednosti $0$ do slike vrednosti $1$. Ker se poljubni daljici sekata v kvečjemu eni komponenti, velja da je $f(I) \cap g(I)$ zaprta množica, ki vsebuje kvečjemu končno mnogo komponent za povezanost. Te komponente so lahko točke ali kosoma linearne krivulje. Presečno število preslikav bomo definirali kot vsoto presečnih števil komponent preseka njunih slik. V ta namen si najprej oglejmo, kako definiramo presečno število posamezne komponente.
 
-Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo definirali presečno število komponente in ga označili z $\ind[K]{f}{g}$. Najprej denimo, da je $K$ le točka, torej $K = \{x\}$ za nek $x$ v ravnini. V primeru, ko je $x$ točka nelinearnosti $f$ ali $g$ in se sliki preslikav v $x$ ne prečkata, primer tega je prikazan na sliki \ref{fig:presecno_tocka_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer označimo smerna vektorja slik preslikav $f$ in $g$ v točki $x$ kot $\overrightarrow{s_f}$ in $\overrightarrow{s_g}$, kar prikazuje slika \ref{fig:presecno_tocka_2}. Kot presečno število komponente definiramo
+Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo definirali presečno število komponente in ga označili z $\ind[K]{f}{g}$. Najprej denimo, da je $K$ le točka, torej $K = \{x\}$ za nek $x$ v ravnini. V primeru, ko je $x$ točka nelinearnosti $f$ ali $g$ in se sliki preslikav v $x$ ne prečkata, primer tega je prikazan na sliki \ref{fig:presecno_tocka_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer označimo smerna vektorja slik preslikav $f$ in $g$ v točki $x$ kot $\overrightarrow{s_f}$ in $\overrightarrow{s_g}$, kot prikazuje slika \ref{fig:presecno_tocka_2}. Presečno število komponente definiramo kot
 \begin{equation*}
 \ind[K]{f}{g} = \begin{cases}
 1; & \overrightarrow{s_f}\ \text{in}\ \overrightarrow{s_g}\ \text{tvorita pozitivno orientirano bazo,}\\
@@ -273,7 +273,7 @@ Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = 
 	\node[right] at (0, 0) {$f(a)$};
 	\draw[->, dashed] (0.354, 0.354) arc (45: 198.4: 0.5);
 
-	\draw[loosely dotted] (1, 1) -- (2, 1);
+	\draw[dotted] (1, 1) -- (2, 1);
 	\draw (2, 1) -- (3, 0.5);
 	\draw[->, blue] (3, 0.5) -- (4.5, 1) node[pos = 1, above] {$f$};
 	\draw[->, gray] (3, 0.5) -- (4, -0.5) node[pos = 1, right] {$g$};
@@ -295,7 +295,7 @@ Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = 
 	\node[above] at (0, 0) {$f(b)$};
 	\draw[->, dashed] (0.416, 0.277) arc (33.7: -45: 0.5);
 	
-	\draw[loosely dotted] (1.5, 1) -- (2.5, 1);
+	\draw[dotted] (1.5, 1) -- (2.5, 1);
 	\draw (2.5, 1) -- (4, 1.5);
 	\draw[->, blue] (5, 2.5) -- (4, 1.5) node[pos = 0, right] {$f$};
 	\draw[->, gray] (4.5, 0.5) -- (4, 1.5) node[pos = 0, right] {$g$};
@@ -462,7 +462,7 @@ kjer je $k = e^{i\pi / 3}$. Primer rotacije prikazuje slika \ref{fig:rotacija_os
 \label{fig:rotacija_osnovna}
 \end{figure}
 
-Naj bo $A$ orientiran lok v kompleksni ravnini $\partial A = \{a_1, a_2\}$ pa njegovi oglišči. Za $x\in \C$ je $\ind{A}{A_x}$ dobro definirano, če je $\partial A \cap A_x = \emptyset = A \cap (\partial A)_x$. Označimo območje, kjer ta pogoj velja, z $D_A \subset \C$. Dokažimo še naslednjo lemo, v kateri presečno število $\ind{A}{A_x}$ obravnavamo kot funkcijo točke $x \in D_A$ okoli katere zavrtimo $A$, torej $\ind{A}{A_x} \colon D_A \to \Z$.
+Naj bo $A$ orientiran lok v kompleksni ravnini $\partial A = \{a_1, a_2\}$ pa njegovi oglišči. Za $x\in \C$ je $\ind{A}{A_x}$ dobro definirano, če je $\partial A \cap A_x = \emptyset = A \cap (\partial A)_x$. Označimo območje, kjer ta pogoj velja, z $D_A \subset \C$. Dokažimo še naslednjo lemo, v kateri presečno število $\ind{A}{A_x}$ obravnavamo, kot funkcijo točke $x \in D_A$ okoli katere zavrtimo $A$, torej $\ind{A}{A_x} \colon D_A \to \Z$.
 
 \begin{lema}\label{le:lema2}
 \begin{enumerate}
@@ -540,7 +540,7 @@ Trdimo, da $T'$ ne vsebuje oglišč enakostraničnega trikotnika, ki ima za eno 
 \item Naj velja $e,\ f \in T' \setminus S$. Tedaj je $(e, f) \in T \times T$ in zato $(e, f) = (e_j, e_j)$.
 \item Naj velja $e \in S$ in $f \in T' \setminus S$. Ker $e$ leži na daljici, je njegova oddaljenost od $L_1$ kvečjemu enaka dolžini daljice. Tako veljata $d(e, L_1)\leq \delta$ in $f \in T$, od tod pa sledi $(e, f) \notin E_2 \cup E_3$. Zato mora veljati $(e, f) \in E_1$. Iz predpisa $E_1$ sledi $d(e, e_1) = d(f, e_1)$. Ampak točka $f$ ne leži na $S$ in zato velja $d(f, e_1) > \delta$, kar je v protislovju z $d(e, e_1) \leq \delta$. Ta primer se torej ne more zgoditi.
 \item Tokrat naj velja $f \in S$ in $e \in T' \setminus S$. Zaradi simetrije s prejšnjim primerom lahko sklepamo, da se tudi ta primer ne more zgoditi.
-\item Preostane nam obravnavati primer, ko velja $e,\ f \in S$. Tokrat velja $d(e, L_1) \leq d(e, e_1) \leq \delta$ in $d(f, T) \leq d(f, e_1) \leq \delta$, torej zopet sledi da $(e, f) \notin E_2 \cup E_3$. Tako velja $(e, f) \in E_1$. Zaradi predpisa $E_1$ in dejstva, da točki $e$ in $f$ ležita na daljici s krajiščem v $e_1$, mora tudi v tem primeru veljati $(e, f) = (e_1, e_1)$.
+\item Preostane nam obravnavati primer, ko velja $e,\ f \in S$. Tokrat velja $d(e, L_1) \leq d(e, e_1) \leq \delta$ in $d(f, T) \leq d(f, e_1) \leq \delta$, torej zopet sledi, da $(e, f) \notin E_2 \cup E_3$. Tako velja $(e, f) \in E_1$. Zaradi predpisa $E_1$ in dejstva, da točki $e$ in $f$ ležita na daljici s krajiščem v $e_1$, mora tudi v tem primeru veljati $(e, f) = (e_1, e_1)$.
 \end{enumerate}
 \endproof
 
@@ -653,7 +653,7 @@ S tem je presečno število za preslikavi $f \colon I \to \R^3$ in $g \colon I^2
 Ena izmed končnih točk triode $T$ (v prostoru $\R^n$) je ogliščna točka.
 \end{izrek} 
 
-Dokazu pristopimo tak,o kot smo to storili pri dokazu podobnega izreka v ravnini. Z enakimi premisleki, kot v razdelku \ref{razd:presecno}, lahko ugotovimo, da za množico $A \subset \R^3$ še vedno velja lema \ref{le:lema2}. Dokaz leme \ref{le:protislovje} prav tako v višjih dimenzijah še vedno velja. Zamenjati moramo le njegov prvi odstavek. In sicer ga zamenjamo z  naslednjim:
+Dokazu pristopimo tako, kot smo to storili pri dokazu podobnega izreka v ravnini. Z enakimi premisleki, kot v razdelku \ref{razd:presecno}, lahko ugotovimo, da za množico $A \subset \R^3$ še vedno velja lema \ref{le:lema2}. Dokaz leme \ref{le:protislovje} prav tako v višjih dimenzijah še vedno velja. Zamenjati moramo le njegov prvi odstavek. In sicer ga zamenjamo z  naslednjim:
 
 Za $j \in \{1, 2, 3\}$ definiramo množice $E_j \subset \R^{2n}$ kot 
 \[
@@ -674,7 +674,7 @@ Naj bo $M$ poljubna povezana mnogoterost dimenzije vsaj $2$, ki je vložena v $\
 \end{posledica}
 
 \proof
-Denimo da obstajajo tri točke $e_1,\ e_2$ in $e_3 \in M$, ki niso ogliščne točke mnogoterosti $M$. Ker je $M$ povezana in dimenzije vsaj $2$, v $M$ obstaja trioda $T$, ki ima $e_1,\ e_2$ in $e_3$ za končne točke. Tedaj je za nek $k \in \{1, 2, 3\}$ po izreku \ref{izr:trioda_prostor} točka $e_k$ ogliščna točka $T$. A ker je $T \subset M$, to pomeni da je $e_k$ tudi ogliščna točka $M$.
+Denimo, da obstajajo tri točke $e_1,\ e_2$ in $e_3 \in M$, ki niso ogliščne točke mnogoterosti $M$. Ker je $M$ povezana in dimenzije vsaj $2$, v $M$ obstaja trioda $T$, ki ima $e_1,\ e_2$ in $e_3$ za končne točke. Tedaj je za nek $k \in \{1, 2, 3\}$ po izreku \ref{izr:trioda_prostor} točka $e_k$ ogliščna točka $T$. A ker je $T \subset M$, to pomeni, da je $e_k$ tudi ogliščna točka $M$.
 \endproof
 
 %-------------------------------------------------------------
