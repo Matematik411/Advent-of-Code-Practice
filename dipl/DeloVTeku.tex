@@ -4,7 +4,7 @@
 % \documentclass[mat2]{fmfdelo}
 % \documentclass[fin2]{fmfdelo}
 % \documentclass[isrm2]{fmfdelo}
-\usepackage{tikz}
+
 
 % naslednje ukaze ustrezno napolnite
 \avtor{Nejc Zajc}
@@ -26,21 +26,21 @@
 
 %  V povzetku na kratko opišite vsebinske rezultate dela. Sem ne sodi razlaga organizacije dela --
 %  v katerem poglavju/razdelku je kaj, pač pa le opis vsebine.
-\povzetek{Povzetek bo tu}
+\povzetek{V diplomski nalogi odgovorimo na vprašanji obstoja in števila enakostraničnih trikotnikov na Jordanovih krivuljah. Osrednji del naloge je namenjen analizi te tematike v ravnini. V nalogi definiramo pojem presečnega števila krivulj in si ogledamo kaj so triode. Z uporabo teh pojmov uspemo pokazati, da kvečjemu dve točki na Jordanovi krivulji nista oglišči nekega enakostraničnega trikotnika, ki ima vsa oglišča na tej krivulji. V drugem delu naloge posplošimo rezultate iz ravnine v prostore višjih dimenzij. Ob koncu si pogledamo še nekatere rezultate glede obstoja kvadrata na ravninski Jordanovi krivulji in pokažemo, da na njej vselej obstaja pravokotnik.}
 
 %  Prevod slovenskega povzetka v angleščino.
-\abstract{Abstract goes here}
+\abstract{In this work, we give answers to questions regarding the existence and the number of equilateral triangles on Jordan curves. The main part of the work shows the results on these questions in the plane. We define the intersection number of two functions and take a look at triods. Using these concepts we show that all but two points on a Jordan curve are vertices of some equilateral triangle on this curve. In the second part we generalize the results from the plane to spaces of higher dimensions. At the end we take a look at some of the results on the topic of squares on Jordan curves. We also show that there always exists a rectangle on a Jordan curve.}
 
 % navedite vsaj eno klasifikacijsko oznako --
 % dostopne so na www.ams.org/mathscinet/msc/msc2020.html
-\klasifikacija{}
-\kljucnebesede{} % navedite nekaj ključnih pojmov, ki nastopajo v delu
-\keywords{} % angleški prevod ključnih besed
+\klasifikacija{57K20, 57M50}
+\kljucnebesede{enakostranični trikotnik, Jordanova krivulja, presečno število, ravnina, trioda} % navedite nekaj ključnih pojmov, ki nastopajo v delu
+\keywords{equilateral triangle, Jordan curve, intersection number, plane, triod} % angleški prevod ključnih besed
 
 \zapisiMetaPodatke  % poskrbi za metapodatke in veljaven PDF/A-1b standard
 
 % aktivirajte pakete, ki jih potrebujete
-% \usepackage{tikz}
+\usepackage{tikz}
 
 % za številske množice uporabite naslednje simbole
 \newcommand{\R}{\mathbb R}
@@ -68,7 +68,7 @@
 
 %---------------------------------------------------------------
 \section{Uvod}
-Že več kot stoletje se matematiki ukvarjajo z na videz preprostim vprašanjem -- ali na vsaki Jordanovi krivulji obstajajo oglišča kvadrata. Ta problem je preprost v formulaciji in hitro razumljiv, a je vseeno do danes ostal nerešen. Prvi ga je leta 1911 postavil nemški matematik Otto Toeplitz \cite{splet_idaho} in v letih, ki so sledila, so matematiki prišli do različnih delnih rezultatov. Podrobno so se raziskala tudi podobna vprašanja, kot na primer iskanje trikotnikov in drugih objektov na Jordanovih krivuljah. V diplomski nalogi si bomo ogledali rezultate pri iskanju trikotnikov in kako smo do njih prišli.
+Že več kot stoletje se matematiki ukvarjajo z na videz preprostim vprašanjem -- ali na vsaki Jordanovi krivulji obstajajo oglišča kvadrata. Ta problem je preprost v formulaciji in hitro razumljiv, a je vseeno do danes ostal nerešen. Prvi ga je leta 1911 postavil nemški matematik Otto Toeplitz \cite{splet_idaho} in v letih, ki so sledila, so matematiki prišli do različnih delnih rezultatov. Podrobno so se raziskala tudi podobna vprašanja, kot na primer iskanje trikotnikov in drugih objektov na Jordanovih krivuljah. V diplomski nalogi si bomo ogledali rezultate pri iskanju trikotnikov in kako smo do njih prišli. Osrednji rezultati so povzeti po \cite{clanek_meyerson}.
 
 %---------------------------------------------------------------
 \section{Osnove}
@@ -87,7 +87,7 @@ Glavni izrek glede Jordanovih krivulj je Jordanov izrek.
 \begin{izrek}[Jordanov izrek]
 Naj bo $J$ Jordanova krivulja v ravnini $\R^2$. Komplement krivulje $\R \setminus J$ sestavljata natanko dve komponenti za povezanost. Ena je omejena in ena neomejena. Krivulja $J$ je meja obeh komponent.
 \end{izrek}
-Dokaz izreka lahko najdemo v viru \cite{jordan_wiki}. Za Jordanovo krivuljo $J$ v ravnini bomo omejeni komponenti za povezanost $\R \setminus J$ v nalogi rekli \emph{notranjost Jordanove krivulje $J$}. Uporabljali bomo tudi pojem homotopnih preslikav, zato si oglejmo njihovo definicijo.
+Dokaz izreka lahko najdemo v viru \cite{jordan_wiki}. Za Jordanovo krivuljo $J$ v ravnini bomo omejeni komponenti za povezanost $\R \setminus J$ v nalogi rekli \emph{notranjost Jordanove krivulje $J$}. Uporabljali bomo tudi pojem homotopnih preslikav, ki so sicer definirane za zvezne preslikave med topološkimi prostori, a mi bomo uporabljali le njihovo okrnjeno verzijo za ravninske preslikave.
 \begin{definicija}
 Naj bosta $X$ in $Y$ podmnožici ravnine in $f,\ g\colon X \to Y$ zvezni funkciji. Homotopija med  $f$ in $g$ je zvezna preslikava
 \[
@@ -156,8 +156,7 @@ Naj bo $J$ Jordanova krivulja v ravnini in $x \in J$. Točka $x$ je ogliščna t
 
 Oglejmo si še posledico, ki si natančneje ogleda okolico opazovane točke na $J$.
 \begin{posledica}
-Naj bo $J$ Jordanova krivulja v ravnini in $x \in J$. Če obstaja tak krog $K$, da leži njegova notranjost $\mathring{K}$ v notranjosti krivulje $J$ in je $K \cap J = \{x\}$, je $x$ ogliščna točka krivulje $J$.\\
-V posebnem je vsaka točka na gladki Jordanovi krivulji ogliščna.
+Naj bo $J$ Jordanova krivulja v ravnini in $x \in J$. Če obstaja tak krog $K$, da leži njegova notranjost $\mathring{K}$ v notranjosti krivulje $J$ in je $K \cap J = \{x\}$, je $x$ ogliščna točka krivulje $J$.
 \end{posledica}
 \proof
 Ker je $\mathring{K}$ v notranjosti $J$, ležijo vse točke $K$ v notranjosti $J$ ali na $J$. Na krogu $K$ izberemo točki $y$ in $z$, da velja $xyz \sim \triangle$. Ti dve točki izpolnjujeta vse predpostavke posledice \ref{posl:jordan}, zato je točka $x$ ogliščna točka krivulje $J$.
@@ -261,7 +260,7 @@ Naj bo $K \subset f(I) \cap g(I)$ komponenta za povezanost, za katero bomo defin
 \end{minipage}
 \end{figure}
 
-Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = f([a, b])$, za $a,\ b \in (0, 1),\ a < b.$ Prav tako obstaja tak $\varepsilon > 0$, da sta preseka zaprtih krogel z unijo krivulj $\overline{K(f(a), \varepsilon)} \cap (f(I) \cup g(I))$ in $\overline{K(f(b), \varepsilon)} \cap (f(I) \cup g(I))$ linearni triodi s stičišči krakov v $f(a)$ oz. $f(b).$ Za določitev presečnega števila najprej preverimo, ali je prišlo do prečkanja preslikav. V ta namen zavrtimo daljico $\overline{f(a)f(a+\varepsilon)}$ v pozitivni smeri okrog $f(a)$ in daljico $\overline{f(b)f(b-\varepsilon)}$ v negativni smeri okrog $f(b)$, dokler se ne prilegata sliki $f$ ali $g$. Če se po koncu vrtenja obe zavrteni daljici prilegata sliki iste preslikave, kot na sliki \ref{fig:presecno_daljica_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer nas zanima še relativna usmerjenost teh odsekov. Označimo končni legi zgornjih daljic z $\overline{a}$ in $\overline{b}$. Vektorja, ki ju dobimo, ko jima dodamo smer slike $f$ oziroma $g$ na tem intervalu, označimo z $\overrightarrow{a}$ in $\overrightarrow{b}$. To smo storili na sliki \ref{fig:presecno_daljica_2}. Zanima nas, ali kažeta vektorja v komponento $K$ ali iz nje. Presečno število komponente definiramo kot $1$, če velja $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{b}$ glede na $K$ različni ali pa velja $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{b}$ glede na $K$ enaki. Sicer je presečno število komponente enako $-1$. 
+V drugem primeru, ko $K$ ni le točka, velja $K = f([a, b])$, za $a,\ b \in (0, 1),\ a < b.$ Prav tako obstaja tak $\varepsilon > 0$, da sta preseka zaprtih krogel z unijo krivulj $\overline{K(f(a), \varepsilon)} \cap (f(I) \cup g(I))$ in $\overline{K(f(b), \varepsilon)} \cap (f(I) \cup g(I))$ linearni triodi s stičišči krakov v $f(a)$ oz. $f(b).$ Za določitev presečnega števila najprej preverimo, ali je prišlo do prečkanja preslikav. V ta namen zavrtimo daljico $\overline{f(a)f(a+\varepsilon)}$ v pozitivni smeri okrog $f(a)$ in daljico $\overline{f(b)f(b-\varepsilon)}$ v negativni smeri okrog $f(b)$, dokler se ne prilegata sliki $f$ ali $g$. Če se po koncu vrtenja obe zavrteni daljici prilegata sliki iste preslikave, kot na sliki \ref{fig:presecno_daljica_1}, definiramo $\ind[K]{f}{g} = 0.$ Sicer nas zanima še relativna usmerjenost teh odsekov. Označimo končni legi zgornjih daljic z $\overline{a}$ in $\overline{b}$. Vektorja, ki ju dobimo, ko jima dodamo smer slike $f$ oziroma $g$ na tem intervalu, označimo z $\overrightarrow{a}$ in $\overrightarrow{b}$. To smo storili na sliki \ref{fig:presecno_daljica_2}. Zanima nas, ali kažeta vektorja v komponento $K$ ali iz nje. Presečno število komponente definiramo kot $1$, če velja $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{b}$ glede na $K$ različni ali pa velja $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{b}$ glede na $K$ enaki. Sicer je presečno število komponente enako $-1$. 
 
 \begin{figure}[h!]
 \begin{minipage}{0.45\textwidth}
@@ -308,7 +307,7 @@ Druga možnost je, da velja $K \approx J$ za nek interval $J$. Tedaj velja $K = 
 \end{minipage} 
 \end{figure}
 
-Tako smo definirali presečno število komponente. Preden nadaljujemo, opazimo še, da lahko v zadnjem primeru, ko je $K \approx J$ in $\ind[K]{f}{g} \neq 0$ presečno število določimo kar z obravnavo usmerjenosti smernih vektorjev pri enem oglišču komponente $K$. Označimo kot zgoraj vektor $\overrightarrow{a}$, a zdaj nadaljujemo z vrtenjem v pozitivni smeri okrog $f(a)$, dokler se daljica spet ne prilega sliki $f$ ali $g$. Dobljeni vektor, ki mu smer kot prej določimo glede na krivuljo, ki se ji prilega, označimo s $\overrightarrow{c}$. Ta primer prikazuje slika \ref{fig:presecno_daljica_3}. Velja, da je $\ind[K]{f}{g}$ enako $1$, če je $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{c}$ glede na $K$ enaki ali pa je $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{c}$ glede na $K$ različni.  Sicer je presečno število enako $-1$. 
+Tako smo definirali presečno število komponente. Preden nadaljujemo, opazimo še, da lahko v zadnjem primeru, ko je $K$ ni točka in $\ind[K]{f}{g} \neq 0$ presečno število določimo kar z obravnavo usmerjenosti smernih vektorjev pri enem oglišču komponente $K$. Označimo kot zgoraj vektor $\overrightarrow{a}$, a zdaj nadaljujemo z vrtenjem v pozitivni smeri okrog $f(a)$, dokler se daljica spet ne prilega sliki $f$ ali $g$. Dobljeni vektor, ki mu smer kot prej določimo glede na krivuljo, ki se ji prilega, označimo s $\overrightarrow{c}$. Ta primer prikazuje slika \ref{fig:presecno_daljica_3}. Velja, da je $\ind[K]{f}{g}$ enako $1$, če je $\overline{a} \subset f(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{c}$ glede na $K$ enaki ali pa je $\overline{a} \subset g(I)$ in sta usmerjenosti $\overrightarrow{a}$ in $\overrightarrow{c}$ glede na $K$ različni.  Sicer je presečno število enako $-1$. 
 
 \begin{figure}[h!]
 \centering
@@ -328,7 +327,7 @@ Tako smo definirali presečno število komponente. Preden nadaljujemo, opazimo �
 \node [label={[label distance=-10]120:$f(a)$}] at (5, 1.5) {};
 
 \end{tikzpicture}
-\caption{Računanje $\ind[K]{f}{g}$ ob enem oglišču}
+\caption{Računanje $\ind[K]{f}{g}$ ob enem oglišču.}
 \label{fig:presecno_daljica_3}
 \end{figure}
 
@@ -352,7 +351,7 @@ Primer vidimo na sliki \ref{fig:izracun}.
 \filldraw (9.045, 1.045) circle (1pt) node[above = 3] {$-1$};
 \node at (12, 1) {$\ind{f}{g} = -1$}; 
 \end{tikzpicture}
-\caption{Primer izračuna presečnega števila}
+\caption{Primer izračuna presečnega števila.}
 \label{fig:izracun}
 \end{figure}
 
@@ -371,7 +370,7 @@ Naj bosta $f$ in $\widetilde{f}$ kosoma linearni preslikavi in naj se razlikujet
 \node[below] at (0, 0) {$f(a)$};
 \node[below] at (3, 0) {$f(b)$};
 \end{tikzpicture}
-\caption{Skica leme \ref{le:trikotnik}}
+\caption{Skica leme \ref{le:trikotnik}.}
 \end{figure}
 
 \proof
@@ -458,11 +457,26 @@ kjer je $k = e^{i\pi / 3}$. Primer rotacije prikazuje slika \ref{fig:rotacija_os
 \begin{figure}[h!]
 \centering
 \includegraphics[width = 175pt, height = 175pt]{rotacija_zacetna.png}
-\caption{Primer rotacije loka v ravnini}
+\caption{Primer rotacije loka v ravnini.}
 \label{fig:rotacija_osnovna}
 \end{figure}
 
-Naj bo $A$ orientiran lok v kompleksni ravnini $\partial A = \{a_1, a_2\}$ pa njegovi oglišči. Za $x\in \C$ je $\ind{A}{A_x}$ dobro definirano, če je $\partial A \cap A_x = \emptyset = A \cap (\partial A)_x$. Označimo območje, kjer ta pogoj velja, z $D_A \subset \C$. Dokažimo še naslednjo lemo, v kateri presečno število $\ind{A}{A_x}$ obravnavamo, kot funkcijo točke $x \in D_A$ okoli katere zavrtimo $A$, torej $\ind{A}{A_x} \colon D_A \to \Z$.
+Naj bo $A$ orientiran lok v kompleksni ravnini $\partial A = \{a_1, a_2\}$ pa njegovi oglišči. Za $x\in \C$ je $\ind{A}{A_x}$ dobro definirano, če je $\partial A \cap A_x = \emptyset = A \cap (\partial A)_x$. Označimo območje, kjer ta pogoj velja, z $D_A \subset \C$. Slika \ref{fig:kompl_d_a} prikazuje komplement te množice v primeru, ko je $A$ daljica.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\draw (0, 0) -- (0, 5) node[pos = 0.5, right] {$A$};
+\draw[blue] (0, 0) -- (4.330, 2.5) -- (0, 5);
+\draw[blue] (0, 0) -- (-4.330, 2.5) -- (0, 5);
+\node[blue] at (2.85, 4) {$\R^2 \setminus D_A$};
+\end{tikzpicture}
+\caption{Primer komplementa množice $D_A$.}
+\label{fig:kompl_d_a}
+\end{figure}
+
+
+Dokažimo naslednjo lemo, v kateri presečno število $\ind{A}{A_x}$ obravnavamo, kot funkcijo točke $x \in D_A$ okoli katere zavrtimo $A$, torej $\ind{A}{A_x} \colon D_A \to \Z$.
 
 \begin{lema}\label{le:lema2}
 \begin{enumerate}
@@ -503,7 +517,7 @@ Trioda $T$  v ravnini vsebuje oglišča enakostraničnega trikotnika, ki ima za 
 \end{izrek}
 Triodo $T$ bomo v tem poglavju pogosto omenjali, zato z $L_1,\ L_2$ in $L_3$ označimo še njene krake, s $P$ pa stičišče teh krakov. Pri dokazu izreka si bomo pomagali z dvema lemama. In sicer z lemo \ref{le:lema2}, ki smo jo že spoznali, in z naslednjo lemo.
 \begin{lema}\label{le:protislovje}
-Predpostavimo, da za triodo $T$ izrek \ref{izr:glavni} ne drži. Tedaj obstaja trioda $T'$ z istimi končnimi točkami $e_1,\ e_2$ in $e_3$, ki vsebuje daljico $S$, za katero velja, da je eno izmed njenih krajišč točka $e_1$. Tudi za $T'$ trditev iz izreka \ref{izr:glavni} ne velja.
+Predpostavimo, da za triodo $T$ izrek \ref{izr:glavni} ne drži. Tedaj obstaja trioda $T'$ z istimi končnimi točkami $e_1,\ e_2$ in $e_3$, ki vsebuje daljico $S$, za katero velja, da je eno izmed njenih krajišč točka $e_1$. Tedaj tudi za $T'$ izrek \ref{izr:glavni} ne velja.
 \end{lema}
 
 \proof
@@ -602,7 +616,7 @@ Zapisani posledici povesta, da je ogliščnih točk na ravninskih objektih velik
 \draw (3, -2.5) circle (0.15) node[below = 4] {$A$};
 \draw (9, -2.5) circle (0.15) node[below = 4] {$B$};
 \end{tikzpicture}
-\caption{Mejna primera triode in krivulje}
+\caption{Mejna primera triode in krivulje.}
 \label{fig:mejna_primera}
 \end{figure}
 
@@ -616,14 +630,14 @@ Do večjih sprememb pride pri rotaciji krivulje, ki smo jo v ravnini označevali
 \begin{figure}[h!]
 \centering
 \includegraphics[width = 200pt, height = 200pt]{rotacija_druga_ravnina.png}
-\caption{Rotacija daljice v ravnini}
+\caption{Rotacija daljice v ravnini.}
 \label{fig:rotacija_sprem_ravnina}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width = 200pt, height = 200pt]{rotacija_druga_prostor.png}
-\caption{Rotacija daljice v prostoru}
+\caption{Rotacija daljice v prostoru.}
 \label{fig:rotacija_sprem_prostor}
 \end{figure}
 
@@ -633,7 +647,7 @@ Naj bosta torej zdaj $f \colon I \to X \subset \R^3$ in $g \colon I^2 \to X$. Zo
 \begin{equation}\label{eq:razl_rob_prostor}
 \{f(0), f(1)\} \cap g(I^2) = \emptyset \quad \text{in} \quad \{g(x, y) \mid x \in \{0, 1\} \text{ ali } y \in \{0, 1\} \} \cap f(I) = \emptyset
 \end{equation}
-To lastnost smo predpostavili, da je presečno število za $f$ in $g$ lahko dobro definirano. Kot v ravnini, ga definiramo s pomočjo kosoma linearnih aproksimacij, ki obstajajo po izreku o simplicialni aproksimaciji. Tako naj bosta 
+To lastnost smo predpostavili, da je presečno število za $f$ in $g$ lahko dobro definirano. Kot v ravnini, ga definiramo s pomočjo kosoma linearnih aproksimacij, ki obstajajo po izreku o simplicialni aproksimaciji \cite{hatcher_alg_top}. Tako naj bosta 
 \begin{align*}
 \widetilde{f} &\simeq f \colon I \to X \setminus \{g(x, y) \mid x \in \{0, 1\} \text{ ali } y \in \{0, 1\} \} \quad \text{in}\\ 
 \widetilde{g} &\simeq g\colon I^2 \to X \setminus \{f(0), f(1)\}
@@ -739,7 +753,7 @@ f({P, Q}) &= \left( \frac{P+Q}{2} , \|P-Q\| \right).
 	\centering
 	\includegraphics[width = 125pt, height = 175pt]{primer_f_krivulje.png}
 \end{minipage}
-\caption{Primer Jordanove krivulje in njene slike pri preslikavi $f$}
+\caption{Primer Jordanove krivulje in njene slike pri preslikavi $f$.}
 \end{figure}
 
 Slika te preslikave se dotika krivulje $J$ v ravnini $z=0$. Ko gresta namreč točki v paru $\{P, Q\}$ ena proti drugi, gre razdalja med njima proti nič, prav tako pa gre $(P+Q)/2$ proti isti limitni točki, kot točki sami. Tako gre njuna slika res proti točki na krivulji $J$.
@@ -764,7 +778,7 @@ A nas zanima množica neurejenih parov točk na $J$, zato moramo enotski kvadrat
 \arrows{7}{0}{7}{2};
 \draw[dashed] (5, 0) -- (7, 2);
 \end{tikzpicture}
-\caption{Množica neurejenih parov točk $X$}
+\caption{Množica neurejenih parov točk $X$.}
 \label{fig:prvi_pregib}
 \end{figure}
 
@@ -810,7 +824,7 @@ Da najdemo objekt, ki je homeomorfen dobljenemu trikotniku, ga moramo najprej pr
 	\centering
 	\includegraphics[width = 100pt, height = 70pt]{Mobiusov_trak.png}
 \end{minipage}\hfill
-\caption{Preoblikovanje predstavitve množice $X$}
+\caption{Preoblikovanje predstavitve množice $X$.}
 \label{fig:koraki_do_Mob}
 \end{figure}
 
@@ -828,8 +842,22 @@ Vsaka Jordanova krivulja $J$ vsebuje oglišča pravokotnika.
 %------------------------------------------------------------
 \section*{Slovar strokovnih izrazov}
 
-\geslo{}{}
-\geslo{}{}
+\geslo{connected component}{komponenta za povezanost}
+\geslo{embedding}{vložitev}
+\geslo{endpoint}{končna točka}
+\geslo{equilateral triangle}{enakostranični trikotnik}
+\geslo{homotopy}{homotopija}
+\geslo{intersection number}{presečno število}
+\geslo{juncture}{stičišče}
+\geslo{leg}{krak}
+\geslo{line segment}{daljica}
+\geslo{M\"obius strip}{M\"obiusov trak}
+\geslo{origin}{izhodišče}
+\geslo{piecewise linear function}{kosoma linearna preslikava}
+\geslo{simplicial approximation}{simplicialna aproksimacija}
+\geslo{symmetry}{simetrija}
+\geslo{triod}{trioda}
+\geslo{vertex}{oglišče}
 
 % seznam uporabljene literature
 \begin{thebibliography}{99}
