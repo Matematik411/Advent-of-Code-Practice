@@ -1,0 +1,100 @@
+%\documentclass[handout]{beamer}
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{whale}
+\useinnertheme{circles} 
+\useoutertheme{split}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\usepackage[slovene]{babel}
+\usepackage[OT2,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
+\usepackage{colortbl}
+\usepackage[all]{xy}
+
+
+\newtheorem{izrek}[theorem]{Izrek}
+\newtheorem{trditev}[theorem]{Trditev}
+\newtheorem{posledica}[theorem]{Posledica}
+\newtheorem{vprasanje}[theorem]{Vpra\v anje}
+\newtheorem{lema}[theorem]{Lema}
+\newtheorem{definicija}{Definicija}
+
+%\beamertemplatenavigationsymbolsempty
+
+\title{Enakostranični trikotniki in Jordanove krivulje}
+\author[Nejc Zajc]{Nejc Zajc \\ mentor: izr.~prof.~dr.~Aleš Vavpetič}
+%\institute{University of Ljubljana, Slovenia}
+\date{Zagovor dela diplomskega seminarja, 19.\ 4.\ 2022}
+
+
+%nova definicija ukaza
+\newcommand{\ind}[3][]{\text{ind}_{#1}(#2, #3)}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\maketitle
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+\frametitle{Obstoj}
+\pause
+\begin{izrek}
+Vsaka Jordanova krivulja v ravnini vsebuje oglišča enakostraničnega trikotnika.
+\end{izrek}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+\frametitle{Nova pojma}
+\pause
+\begin{itemize}
+\item Trioda
+\pause
+\item Presečno število preslikav
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+\frametitle{Ugotovitve}
+\begin{izrek}\label{izr:glavni}
+Trioda $T$  v ravnini vsebuje oglišča enakostraničnega trikotnika, ki ima za eno izmed oglišč končno točko triode.
+\end{izrek}
+\pause
+\begin{posledica}
+Vse razen kvečjemu dveh točk Jordanove krivulje $J$ v ravnini so ogliščne točke krivulje $J$.
+\end{posledica}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin {frame}
+
+\frametitle{Prostori višjih dimenzij}
+Posplošitve pojmov in rezultatov.
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin {frame}
+
+\frametitle{Včrtani kvadrat}
+Vprašanje včrtanega kvadrata še nerešeno.
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin {frame}
+
+\frametitle{Skica}
+\href{https://www.geogebra.org/calculator/rjr5wbun}{Skica prvega dokaza} 
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
