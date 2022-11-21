@@ -1,40 +1,7 @@
-fnloekigdmpajchb 0
-aihmpjfcdelbogkn 1
-jimebcgfonapldhk 2
-afojipdlmngkhecb 3
-pgjmdocankflbehi 4
-aelndfgmibchkjop 5
-fnaockejidlgpmhb 6
-anbmgjfopehclikd 7
-jopincglbemfadhk 8
-amkjipnhefolgdcb 9
-pdlmiocbngjafkhe 10
-aehdjfgknilmcbop 11
-fegomkipcdajlnhb 12
-apcmejflgdbohikn 13
-jbfencgadoplmihk 14
-ailjnpdgemkhofcb 15
-pdamkocfenlbjghi 16
-admnbfgcjihkleop 17
-fcjodkelmigpanhb 18
-agomejfhipclbnkd 19
-jnliecgmdbfapohk 20
-aihjfpnodelgkmcb 21
-pibmgocjknafldhe 22
-ajkdifglbnmcheop 23
-fmpodkiancjlgehb 24
-aelmdjfbigohcpkn 25
-jnaeocgpidlmfbhk 26
-angjmpdkfeholicb 27
-pkfmnoclgebjadhi 28
-abcnifghejklmdop 29
-fdloikegnmpajchb 30
-aehmpjfcnilbogkd 31
-jemibcgfodaplnhk 32
-afojepnlmdgkhicb 33
-pgjmnocadkflbihe 34
-aildnfgmebchkjop 35
-fdaockijenlgpmhb 36
-adbmgjfopihclekn 37
-jopedcglbimfanhk 38
-amkjepdhifolgncb 39
+     |          
+     |  +--+    
+     A  |  C    
+ F---|----E|--+ 
+     |  |  |  D 
+     +B-+  +--+ 
+                
