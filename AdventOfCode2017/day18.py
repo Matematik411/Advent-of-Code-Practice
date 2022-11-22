@@ -29,11 +29,9 @@ while 0 <= positions[c_m] < R:
     r, *d = rules[positions[c_m]]
 
     if r == "snd":
-        # print(c_m, positions[c_m], send_queue, "ayyyy")
         x = d[0]
         send_queue[c_m].append(value_of(c_m, x))
         send_size[c_m] += 1
-        # print(c_m, positions[c_m], send_queue, "xxxxx")
     elif r == "set":
         x, y = d
         registers[c_m][x] = value_of(c_m, y)
