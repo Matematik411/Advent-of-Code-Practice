@@ -4,7 +4,7 @@
 
 int main() {
     std::string filename;
-    filename = "text.txt";
+    filename = "inputs/text.txt";
 
 
     std::ifstream inputFile(filename);
