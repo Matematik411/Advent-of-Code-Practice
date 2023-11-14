@@ -62,7 +62,7 @@ int main() {
             if (val == 3) {
                 addThree = 1;
             }
-            
+           
         }
         two += addTwo;
         three += addThree;

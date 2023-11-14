@@ -2,21 +2,25 @@
 #include <fstream>
 #include <string>
 
+
+using namespace std;
+
+
 int main() {
-    std::string filename;
+    string filename;
     filename = "inputs/text.txt";
 
 
-    std::ifstream inputFile(filename);
+    ifstream inputFile(filename);
 
     if (!inputFile.is_open()) {
-        std::cerr << "Error opening file." << std::endl;
+        cerr << "Error opening file." << endl;
         return 1;
     }
 
-    std::string line;
-    while (std::getline(inputFile, line)) {
-        std::cout << line << std::endl;
+    string line;
+    while (getline(inputFile, line)) {
+        cout << line << endl;
     }
 
     inputFile.close();
