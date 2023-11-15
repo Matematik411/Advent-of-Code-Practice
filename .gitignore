@@ -130,3 +130,6 @@ dmypy.json
 
 # git delavnica
 untracked.md
+
+# cpp
+*.exe
