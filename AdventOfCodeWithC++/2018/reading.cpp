@@ -1,7 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
+#include <vector>
+#include <set>
 
 using namespace std;
 
@@ -19,9 +20,15 @@ int main() {
     }
 
     string line;
+    std::vector< int > data;
+
+    int c;
     while (getline(inputFile, line)) {
-        cout << line << endl;
+        c = stoi( line );
+        data.push_back(c);
+
     }
+
 
     inputFile.close();
 
